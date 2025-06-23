@@ -86,7 +86,7 @@ const About: React.FC = () => {
             <h3 className="font-playfair text-lg xs:text-xl sm:text-section font-medium text-rich-black mb-4 xs:mb-6 text-center">
             Profesjonalizm
             </h3>
-            <p className="font-crimson text-rich-black/70 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
+            <p className="font-crimson text-rich-black/80 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
               Nasz zespół składa się z doświadczonych stylistów z międzynarodowymi certyfikatami
             </p>
           </div>
@@ -100,7 +100,7 @@ const About: React.FC = () => {
             <h3 className="font-playfair text-lg xs:text-xl sm:text-section font-medium text-rich-black mb-4 xs:mb-6 text-center">
               Indywidualne podejście
             </h3>
-            <p className="font-crimson text-rich-black/70 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
+            <p className="font-crimson text-rich-black/80 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
               Każda klientka jest dla nas wyjątkowa. Dostosowujemy stylizacje do osobowości i stylu życia
             </p>
           </div>
@@ -114,7 +114,7 @@ const About: React.FC = () => {
             <h3 className="font-playfair text-lg xs:text-xl sm:text-section font-medium text-rich-black mb-4 xs:mb-6 text-center">
               Atmosfera
             </h3>
-            <p className="font-crimson text-rich-black/70 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
+            <p className="font-crimson text-rich-black/80 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
               Przytulne wnętrze i przyjazna atmosfera sprawiają, że każda wizyta to chwila relaksu
             </p>
           </div>
