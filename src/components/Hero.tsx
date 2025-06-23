@@ -22,35 +22,68 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-8 animate-fade-in-up">
-        <h1 className="font-playfair text-hero font-light text-pearl-white mb-8 leading-none tracking-tight">
-        Atelier Fryzur
+      <div className="relative z-10 text-center px-4 sm:px-8 animate-fade-in-up w-full">
+        {/* Mobile Title */}
+        <h1 className="font-playfair text-4xl xs:text-5xl font-light text-pearl-white mb-4 leading-tight tracking-tight sm:hidden">
+          Atelier Fryzur
+          <span className="block font-extralight italic text-xl xs:text-2xl mt-1">Mariola Michnowska</span>
+        </h1>
+        {/* Desktop Title */}
+        <h1 className="font-playfair text-hero font-light text-pearl-white mb-8 leading-none tracking-tight hidden sm:block">
+          Atelier Fryzur
           <span className="block font-extralight italic">Mariola Michnowska</span>
         </h1>
-        
-        <div className="w-24 h-px bg-dusty-mauve mx-auto mb-8"></div>
-        
-        <p className="font-crimson text-2xl text-pearl-white/90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+        {/* Divider */}
+        <div className="w-16 h-px bg-dusty-mauve mx-auto mb-6 sm:w-24 sm:mb-8 sm:block hidden"></div>
+        {/* Mobile Divider */}
+        <div className="w-12 h-px bg-dusty-mauve mx-auto mb-4 sm:hidden"></div>
+        {/* Slogan */}
+        <p className="font-crimson text-lg xs:text-xl text-pearl-white/90 mb-6 max-w-xs xs:max-w-sm mx-auto font-light leading-snug sm:text-2xl sm:mb-12">
           Twoje włosy, nasza pasja
         </p>
-        
-        <p className="font-crimson text-xl text-pearl-white/80 mb-16 max-w-3xl mx-auto leading-relaxed">
-          Odkryj wyjątkowe doświadczenie w naszym salonie, gdzie profesjonalizm spotyka się z elegancją
+         {/* Description */}
+        <p className="font-crimson text-base xs:text-lg sm:text-xl text-pearl-white/80 mb-8 sm:mb-16 max-w-xs xs:max-w-md md:max-w-3xl mx-auto leading-normal md:text-center">
+          <span className="md:inline-block md:w-auto">
+            Odkryj wyjątkowe doświadczenie w naszym salonie, gdzie profesjonalizm spotyka się z elegancją
+          </span>
         </p>
+        {/* Przycisk mobilny */}
+      <button
+        onClick={scrollToContact}
+        className="md:hidden group inline-flex items-center space-x-2 bg-pearl-white text-deep-burgundy border-2 border-pearl-white hover:bg-transparent hover:text-pearl-white px-6 py-3 font-crimson font-semibold text-base xs:text-lg rounded-full shadow-md transition-all duration-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pearl-white/60"
+      >
+        <Calendar className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+        <span>Umów wizytę</span>
+      </button>
 
-        <button
-          onClick={scrollToContact}
-          className="group inline-flex items-center space-x-4 bg-transparent border-2 border-pearl-white hover:bg-pearl-white hover:text-deep-burgundy text-pearl-white px-12 py-4 font-crimson font-semibold text-lg transition-all duration-500 transform hover:scale-105"
+      {/* Przycisk desktopowy */}
+      <button 
+        onClick={scrollToContact}
+        className="hidden md:inline-flex group items-center space-x-4 bg-transparent border-2 border-pearl-white hover:bg-pearl-white hover:text-deep-burgundy text-pearl-white px-12 py-4 font-crimson font-semibold text-lg transition-all duration-500 transform hover:scale-105"
+      >
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          className="h-5 w-5 group-hover:scale-110 transition-transform duration-500"
         >
-          <Calendar className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-          <span>Umów wizytę</span>
-        </button>
+          <path d="M8 2v4"></path>
+          <path d="M16 2v4"></path>
+          <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+        </svg>
+        <span>Zobacz wszystkie</span>
+      </button>
       </div>
-
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-12 border-2 border-pearl-white/60 rounded-full flex justify-center">
-          <div className="w-1 h-4 bg-pearl-white/70 rounded-full mt-2 animate-pulse"></div>
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce sm:bottom-12">
+        <div className="w-5 h-10 border-2 border-pearl-white/60 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-pearl-white/70 rounded-full mt-1 animate-pulse"></div>
         </div>
       </div>
     </section>
