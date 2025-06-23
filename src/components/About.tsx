@@ -3,7 +3,7 @@ import { Award, Heart, Users } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
+    <section id="about" className="py-16 xs:py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Dekoracyjne okręgi */}
       <div className="hidden lg:block absolute top-1/4 -left-32 w-72 h-72 rounded-full border-8 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/4 -right-28 w-56 h-56 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
@@ -20,7 +20,10 @@ const About: React.FC = () => {
         </div>
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-md sm:max-w-none mx-auto px-0 xs:px-2 animate-fade-in-up">
-          <div className="text-center group bg-pearl-white/95 border border-dusty-mauve/30 rounded-2xl sm:rounded-3xl shadow-elegant p-6 xs:p-8 sm:p-10 hover:shadow-luxury transition-all duration-500 animate-fade-in-up">
+          <div
+            className="text-center group bg-pearl-white/95 border border-dusty-mauve/30 rounded-2xl sm:rounded-3xl shadow-elegant p-6 xs:p-8 sm:p-10 hover:shadow-luxury transition-all duration-500 animate-fade-in-up mx-auto"
+            style={{ width: '359px', maxWidth: '100%' }}
+          >
             <div className="flex items-center justify-center w-16 h-16 xs:w-20 xs:h-20 bg-dusty-mauve/10 rounded-full mb-6 xs:mb-8 mx-auto">
               <Award className="h-7 w-7 xs:h-9 xs:w-9 text-dusty-mauve" />
             </div>
@@ -31,7 +34,10 @@ const About: React.FC = () => {
               Nasz zespół składa się z doświadczonych stylistów z międzynarodowymi certyfikatami
             </p>
           </div>
-          <div className="text-center group bg-pearl-white/95 border border-dusty-mauve/30 rounded-2xl sm:rounded-3xl shadow-elegant p-6 xs:p-8 sm:p-10 hover:shadow-luxury transition-all duration-500 animate-fade-in-up">
+          <div
+            className="text-center group bg-pearl-white/95 border border-dusty-mauve/30 rounded-2xl sm:rounded-3xl shadow-elegant p-6 xs:p-8 sm:p-10 hover:shadow-luxury transition-all duration-500 animate-fade-in-up mx-auto"
+            style={{ width: '359px', maxWidth: '100%' }}
+          >
             <div className="flex items-center justify-center w-16 h-16 xs:w-20 xs:h-20 bg-dusty-mauve/10 rounded-full mb-6 xs:mb-8 mx-auto">
               <Heart className="h-7 w-7 xs:h-9 xs:w-9 text-dusty-mauve" />
             </div>
@@ -42,7 +48,10 @@ const About: React.FC = () => {
               Każda klientka jest dla nas wyjątkowa. Dostosowujemy stylizacje do osobowości i stylu życia
             </p>
           </div>
-          <div className="text-center group bg-pearl-white/95 border border-dusty-mauve/30 rounded-2xl sm:rounded-3xl shadow-elegant p-6 xs:p-8 sm:p-10 hover:shadow-luxury transition-all duration-500 animate-fade-in-up">
+          <div
+            className="text-center group bg-pearl-white/95 border border-dusty-mauve/30 rounded-2xl sm:rounded-3xl shadow-elegant p-6 xs:p-8 sm:p-10 hover:shadow-luxury transition-all duration-500 animate-fade-in-up mx-auto"
+            style={{ width: '359px', maxWidth: '100%' }}
+          >
             <div className="flex items-center justify-center w-16 h-16 xs:w-20 xs:h-20 bg-dusty-mauve/10 rounded-full mb-6 xs:mb-8 mx-auto">
               <Users className="h-7 w-7 xs:h-9 xs:w-9 text-dusty-mauve" />
             </div>

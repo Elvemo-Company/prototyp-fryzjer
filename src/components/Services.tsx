@@ -46,7 +46,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-32 relative overflow-hidden">
+    <section id="services" className="py-16 xs:py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Dekoracyjne okręgi - więcej okręgów + dodatkowe duże kółko na górze po lewej */}
       <div className="hidden lg:block absolute top-1/4 -left-28 w-56 h-56 rounded-full border-6 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/4 -right-36 w-72 h-72 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
@@ -60,12 +60,12 @@ const Services: React.FC = () => {
       
       <div className="max-w-6xl mx-auto px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-28 animate-fade-in-up">
-          <h2 className="font-playfair text-display font-light mb-8 tracking-tight bg-gradient-to-r from-dusty-mauve via-deep-burgundy to-dusty-mauve bg-clip-text text-transparent">
+        <div className="text-center mb-10 xs:mb-14 sm:mb-20 lg:mb-28 animate-fade-in-up">
+          <h2 className="font-playfair text-2xl xs:text-3xl sm:text-display font-light mb-4 sm:mb-8 tracking-tight bg-gradient-to-r from-dusty-mauve via-deep-burgundy to-dusty-mauve bg-clip-text text-transparent">
             Usługi i Cennik
           </h2>
-          <div className="w-24 h-1 bg-dusty-mauve mx-auto mb-12 rounded-full animate-fade-in"></div>
-          <p className="font-crimson text-large text-rich-black/80 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-16 h-1 sm:w-24 bg-dusty-mauve mx-auto mb-6 sm:mb-12 rounded-full animate-fade-in"></div>
+          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-3xl mx-auto leading-relaxed">
             Oferujemy pełen zakres profesjonalnych usług fryzjerskich w konkurencyjnych cenach
           </p>
         </div>
@@ -114,7 +114,7 @@ const Services: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <p className="font-crimson text-rich-black/70 mb-8 text-lg">
+          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-3xl mx-auto leading-relaxed mb-8">
             Ceny mogą się różnić w zależności od długości i typu włosów
           </p>
           <div className="inline-flex items-center space-x-4 bg-dusty-mauve/10 px-12 py-6 border border-dusty-mauve/20">
