@@ -1,34 +1,42 @@
 import React from 'react';
 
+// Import obrazów galerii
+import galery1 from '../assets/galery1.jpg';
+import galery2 from '../assets/galery2.jpg';
+import galery3 from '../assets/galery3.jpg';
+import galery4 from '../assets/galery4.jpg';
+import galery5 from '../assets/galery5.jpg';
+import galery6 from '../assets/galery6.jpg';
+
 const Gallery: React.FC = () => {
   const galleryImages = [
     {
-      src: "/src/assets/galery1.jpg",
+      src: galery1,
       alt: "Elegancka koloryzacja i stylizacja",
       tall: true
     },
     {
-      src: "/src/assets/galery2.jpg",
+      src: galery2,
       alt: "Modne strzyżenie bob",
       tall: false
     },
     {
-      src: "/src/assets/galery3.jpg",
+      src: galery3,
       alt: "Stylizacja na szczególną okazję",
       tall: false
     },
     {
-      src: "/src/assets/galery4.jpg",
+      src: galery4,
       alt: "Naturalne fale i koloryzacja",
       tall: true
     },
     {
-      src: "/src/assets/galery5.jpg",
+      src: galery5,
       alt: "Koloryzacja baleyage",
       tall: false
     },
     {
-      src: "/src/assets/galery6.jpg",
+      src: galery6,
       alt: "Kreatywne upięcie",
       tall: true
     }
