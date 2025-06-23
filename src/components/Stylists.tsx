@@ -30,18 +30,18 @@ const Stylists: React.FC = () => {
   ];
 
   return (
-    <section id="stylists" className="py-32 relative overflow-hidden">
+    <section id="stylists" className="relative overflow-hidden">
       {/* Dekoracyjne okręgi */}
       <div className="hidden lg:block absolute top-1/3 -right-32 w-64 h-64 rounded-full border-8 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/3 -left-40 w-80 h-80 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
       <div className="max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-28 animate-fade-in-up">
-          <h2 className="font-playfair text-display font-light mb-8 tracking-tight bg-gradient-to-r from-dusty-mauve via-deep-burgundy to-dusty-mauve bg-clip-text text-transparent">
+        <div className="text-center mb-16 sm:mb-24 lg:mb-28 animate-fade-in-up">
+          <h2 className="font-playfair text-2xl xs:text-3xl sm:text-display font-light mb-4 sm:mb-8 tracking-tight bg-gradient-to-r from-dusty-mauve via-deep-burgundy to-dusty-mauve bg-clip-text text-transparent">
             Poznaj nasze fryzjerki
           </h2>
-          <div className="w-24 h-1 bg-dusty-mauve mx-auto mb-12 rounded-full animate-fade-in"></div>
-          <p className="font-crimson text-large text-rich-black/80 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-16 h-1 sm:w-24 bg-dusty-mauve mx-auto mb-6 sm:mb-12 rounded-full animate-fade-in"></div>
+          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-4xl mx-auto leading-relaxed">
             Nasz zespół to pasjonaci, którzy każdego dnia tworzą wyjątkowe stylizacje
           </p>
         </div>
@@ -49,13 +49,13 @@ const Stylists: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-16 animate-fade-in-up">
           {stylists.map((stylist, index) => (
             <div key={index} className="group animate-fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-              <div className="bg-pearl-white/90 border border-dusty-mauve/30 rounded-3xl shadow-elegant hover:shadow-luxury transition-all duration-500 transform hover:scale-105 overflow-hidden">
+              <div className="bg-pearl-white/90 border border-dusty-mauve/30 rounded-3xl shadow-elegant hover:shadow-luxury transition-all duration-500 transform overflow-hidden lg:hover:scale-105">
                 {/* Large Portrait */}
                 <div className="relative overflow-hidden">
                   <img
                     src={stylist.image}
                     alt={stylist.name}
-                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-64 object-cover transition-transform duration-700 lg:group-hover:scale-110"
                   />
                 </div>
                 {/* Content */}
