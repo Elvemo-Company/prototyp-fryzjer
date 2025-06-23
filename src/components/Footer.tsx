@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
       <div className="hidden lg:block absolute bottom-1/4 -left-32 w-64 h-64 rounded-full border-6 border-pearl-white/10 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute top-20 left-20 w-32 h-32 rounded-full border-2 border-dusty-mauve/20 z-0 animate-fade-in"></div>
       
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 py-24">
+             <div className="max-w-7xl mx-auto px-8 lg:px-12 py-12 lg:py-24">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 relative z-10">
           {/* Logo & Description - ukryte na mobile */}
           <div className="hidden lg:block lg:col-span-2">
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-playfair text-lg lg:text-2xl font-medium mb-6 lg:mb-10 text-dusty-mauve">
+            <h3 className="font-playfair text-lg lg:text-2xl font-medium mb-4 lg:mb-10 text-dusty-mauve">
               Menu
             </h3>
             <ul className="space-y-3 lg:space-y-5">
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
 
           {/* Contact Info + Social Media */}
           <div>
-            <h3 className="font-playfair text-lg lg:text-2xl font-medium mb-6 lg:mb-10 text-dusty-mauve">
+            <h3 className="font-playfair text-lg lg:text-2xl font-medium mb-4 lg:mb-10 text-dusty-mauve">
               Kontakt
             </h3>
             <div className="space-y-4 lg:space-y-6">
@@ -100,8 +100,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-pearl-white/20 mt-20 pt-12">
+                 {/* Bottom Section */}
+         <div className="border-t border-pearl-white/20 mt-8 lg:mt-20 pt-6 lg:pt-12">
           <div className="flex flex-col lg:flex-row justify-between items-center relative z-10">
             <p className="font-crimson text-pearl-white/60 text-lg">
               © 2025 Atelier Fryzur Mariola Michnowska. Wszystkie prawa zastrzeżone.
