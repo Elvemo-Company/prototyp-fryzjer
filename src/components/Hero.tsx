@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
           <path d="M16 2v4"></path>
           <rect width="18" height="18" x="3" y="4" rx="2"></rect>
         </svg>
-        <span>Zobacz wszystkie</span>
+        <span>Umów wizytę</span>
       </button>
       </div>
       {/* Scroll Indicator */}

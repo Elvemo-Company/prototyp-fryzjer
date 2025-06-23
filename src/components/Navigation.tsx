@@ -31,19 +31,21 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-pearl-white/95 backdrop-blur-lg shadow-elegant' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-8 lg:px-12">
-        <div className="flex justify-between items-center py-6">
-          <div className="flex items-center space-x-4">
-            <div className={`p-3 rounded-full ${isScrolled ? 'bg-deep-burgundy/10' : 'bg-pearl-white/20'}`}>
-              <Scissors className={`h-6 w-6 ${isScrolled ? 'text-deep-burgundy' : 'text-pearl-white'}`} />
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500
+      ${isScrolled
+        ? 'bg-pearl-white/95 backdrop-blur-lg shadow-elegant'
+        : 'bg-transparent'}
+      px-2 xs:px-4 sm:px-0
+    `}>
+      <div className="max-w-7xl mx-auto px-2 xs:px-4 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center py-3 xs:py-4 sm:py-6">
+          <div className="flex items-center space-x-2 xs:space-x-3 sm:space-x-4">
+            <div className={`p-2 xs:p-3 rounded-full ${isScrolled ? 'bg-deep-burgundy/10' : 'bg-pearl-white/20'}`}>
+              <Scissors className={`h-5 w-5 xs:h-6 xs:w-6 ${isScrolled ? 'text-deep-burgundy' : 'text-pearl-white'}`} />
             </div>
-            <span className={`font-playfair text-2xl font-light tracking-wide ${isScrolled ? 'text-rich-black' : 'text-pearl-white'}`}>
-            Atelier Fryzur Mariola Michnowska 
+            <span className={`font-playfair text-lg xs:text-xl sm:text-2xl font-light tracking-wide ${isScrolled ? 'text-rich-black' : 'text-pearl-white'}`}>
+              <span className="block sm:inline">Atelier Fryzur</span>
+              <span className="block sm:inline font-extralight italic"> Mariola Michnowska</span>
             </span>
           </div>
 
