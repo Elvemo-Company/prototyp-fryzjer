@@ -1,7 +1,9 @@
-import React from 'react';
-import { Scissors, Palette, Wind, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Scissors, Palette, Wind, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Services: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const services = [
     {
       category: "Strzyżenie damskie",
@@ -73,38 +75,90 @@ const Services: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 animate-fade-in-up">
           {services.map((category, index) => (
             <div key={index} className="group animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="bg-pearl-white/90 border border-dusty-mauve/30 rounded-3xl shadow-elegant hover:shadow-luxury transition-all duration-500 transform hover:scale-105 overflow-hidden">
-                {/* Category Header */}
-                <div className="bg-deep-burgundy/50 p-8 rounded-t-3xl">
+              {/* Mobile Accordion */}
+              <div className="block lg:hidden">
+                <button
+                  className={`w-full flex items-center justify-between bg-deep-burgundy/50 border border-dusty-mauve/30 shadow-elegant px-5 py-4 focus:outline-none transition-all duration-300 touch-manipulation rounded-2xl ${openIndex === index ? 'rounded-b-none' : ''}`}
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  aria-expanded={openIndex === index}
+                  aria-controls={`services-panel-${index}`}
+                >
                   <div className="flex items-center space-x-4">
-                    <div className="bg-pearl-white/20 p-4 rounded-full">
-                      <div className="text-pearl-white">
-                        {category.icon}
-                      </div>
-                    </div>
-                    <h3 className="font-playfair text-2xl font-medium text-pearl-white">
-                      {category.category}
-                    </h3>
+                    <span className="bg-pearl-white/20 p-3 rounded-full text-pearl-white">{category.icon}</span>
+                    <span className="font-playfair text-lg font-medium text-pearl-white">{category.category}</span>
                   </div>
-                </div>
-                {/* Services List */}
-                <div className="p-8">
-                  <div className="space-y-6">
+                  <span className="ml-2">
+                    {openIndex === index ? (
+                      <ChevronUp className="w-6 h-6 text-pearl-white transition-transform duration-300" />
+                    ) : (
+                      <ChevronDown className="w-6 h-6 text-pearl-white transition-transform duration-300" />
+                    )}
+                  </span>
+                </button>
+                <div
+                  id={`services-panel-${index}`}
+                  className={`overflow-hidden transition-all duration-400 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100 py-2' : 'max-h-0 opacity-0 py-0'}`}
+                  style={{
+                    transition: 'max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s',
+                    padding: 0 // Usuwa padding bezpośrednio z kontenera rozwijanego
+                  }}
+                >
+                  <div className="space-y-2 px-5 pb-2 bg-pearl-white/90 rounded-b-2xl pt-0 sm:pt-2">
+                    {/* pt-0 usuwa padding-top na mobile, sm:pt-2 przywraca na większych ekranach */}
                     {category.services.map((service, serviceIndex) => (
                       <div
                         key={serviceIndex}
-                        className={`flex justify-between items-center py-4 px-6 transition-colors duration-300 rounded-xl ${
+                        className={`flex justify-between items-center py-3 px-3 rounded-xl transition-colors duration-300 text-left ${
                           serviceIndex % 2 === 0 ? 'bg-pearl-white/80' : 'bg-dusty-mauve/10'
                         } hover:bg-dusty-mauve/20`}
+                        style={{ boxShadow: '0 1px 4px 0 rgba(80, 40, 60, 0.04)' }}
                       >
-                        <span className="font-crimson text-rich-black font-medium text-lg">
+                        <span className="font-crimson text-rich-black font-medium text-base xs:text-lg">
                           {service.name}
                         </span>
-                        <span className="font-playfair text-dusty-mauve font-semibold text-xl">
+                        <span className="font-playfair text-dusty-mauve font-semibold text-base xs:text-lg">
                           {service.price}
                         </span>
                       </div>
                     ))}
+                  </div>
+                </div>
+              </div>
+              {/* Desktop Card (unchanged) */}
+              <div className="hidden lg:block">
+                <div className="bg-pearl-white/90 border border-dusty-mauve/30 rounded-3xl shadow-elegant hover:shadow-luxury transition-all duration-500 transform hover:scale-105 overflow-hidden">
+                  {/* Category Header */}
+                  <div className="bg-deep-burgundy/50 p-8 rounded-t-3xl">
+                    <div className="flex items-center space-x-4">
+                      <div className="bg-pearl-white/20 p-4 rounded-full">
+                        <div className="text-pearl-white">
+                          {category.icon}
+                        </div>
+                      </div>
+                      <h3 className="font-playfair text-2xl font-medium text-pearl-white">
+                        {category.category}
+                      </h3>
+                    </div>
+                  </div>
+                  {/* Services List */}
+                  <div className="p-8">
+                    <div className="space-y-6">
+                      {category.services.map((service, serviceIndex) => (
+                        <div
+                          key={serviceIndex}
+                          className={`flex justify-between items-center py-4 px-6 transition-colors duration-300 rounded-xl ${
+                            serviceIndex % 2 === 0 ? 'bg-pearl-white/80' : 'bg-dusty-mauve/10'
+                          } hover:bg-dusty-mauve/20`}
+                        >
+                          <span className="font-crimson text-rich-black font-medium text-lg">
+                            {service.name}
+                          </span>
+                          <span className="font-playfair text-dusty-mauve font-semibold text-xl">
+                            {service.price}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -131,3 +185,15 @@ const Services: React.FC = () => {
 };
 
 export default Services;
+
+/*
+  Add to global CSS (e.g. index.css or a new file imported in App):
+  @media (min-width: 1024px) {
+    .mobile-accordion { display: none; }
+    .desktop-cards { display: block; }
+  }
+  @media (max-width: 1023px) {
+    .mobile-accordion { display: block; }
+    .desktop-cards { display: none; }
+  }
+*/

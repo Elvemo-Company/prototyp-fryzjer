@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 // Minimalistyczny separator
 const SectionSeparator: React.FC = () => (
-  <div className="py-12">
+  <div className="py-2">
     <div className="max-w-7xl mx-auto px-6">
       <div className="h-0.5 bg-dusty-mauve/50"></div>
     </div>
