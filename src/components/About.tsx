@@ -15,7 +15,7 @@ const About: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-dusty-mauve mx-auto mb-12 rounded-full animate-fade-in"></div>
           <p className="font-crimson text-large text-rich-black/80 max-w-4xl mx-auto leading-relaxed">
-            Studio Fryzur Elegance to miejsce, gdzie tradycyjne rzemiosło fryzjerskie spotyka się z nowoczesnymi trendami. Od ponad 10 lat tworzymy wyjątkowe stylizacje, które podkreślają naturalną piękność naszych klientek.
+          Atelier Fryzur Mariola Michnowska to miejsce, gdzie tradycyjne rzemiosło fryzjerskie spotyka się z nowoczesnymi trendami. Od ponad 10 lat tworzymy wyjątkowe stylizacje, które podkreślają naturalną piękność naszych klientek.
           </p>
         </div>
         {/* Features Grid */}
@@ -25,7 +25,7 @@ const About: React.FC = () => {
               <Award className="h-9 w-9 text-dusty-mauve" />
             </div>
             <h3 className="font-playfair text-section font-medium text-rich-black mb-6 text-center">
-              Profesjonalizm
+            Profesjonalizm
             </h3>
             <p className="font-crimson text-rich-black/70 leading-relaxed text-base text-center px-4">
               Nasz zespół składa się z doświadczonych stylistów z międzynarodowymi certyfikatami
@@ -35,7 +35,7 @@ const About: React.FC = () => {
             <div className="flex items-center justify-center w-20 h-20 bg-dusty-mauve/10 rounded-full mb-8 mx-auto">
               <Heart className="h-9 w-9 text-dusty-mauve" />
             </div>
-            <h3 className="font-playfair text-section font-medium text-rich-black mb-6">
+            <h3 className="font-playfair text-section font-medium text-rich-black mb-6 text-center">
               Indywidualne podejście
             </h3>
             <p className="font-crimson text-rich-black/70 leading-relaxed text-base text-center px-4">
@@ -46,7 +46,7 @@ const About: React.FC = () => {
             <div className="flex items-center justify-center w-20 h-20 bg-dusty-mauve/10 rounded-full mb-8 mx-auto">
               <Users className="h-9 w-9 text-dusty-mauve" />
             </div>
-            <h3 className="font-playfair text-section font-medium text-rich-black mb-6">
+            <h3 className="font-playfair text-section font-medium text-rich-black mb-6 text-center">
               Atmosfera
             </h3>
             <p className="font-crimson text-rich-black/70 leading-relaxed text-base text-center px-4">

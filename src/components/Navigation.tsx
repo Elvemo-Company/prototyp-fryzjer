@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {
               <Scissors className={`h-6 w-6 ${isScrolled ? 'text-deep-burgundy' : 'text-pearl-white'}`} />
             </div>
             <span className={`font-playfair text-2xl font-light tracking-wide ${isScrolled ? 'text-rich-black' : 'text-pearl-white'}`}>
-              Studio Fryzur Elegance
+            Atelier Fryzur Mariola Michnowska 
             </span>
           </div>
 

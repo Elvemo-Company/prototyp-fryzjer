@@ -11,19 +11,21 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-rich-black text-pearl-white relative overflow-hidden">
-      {/* Dekoracyjne okręgi */}
+      {/* Dekoracyjne okręgi - mniej okręgów, lepsze rozmieszczenie */}
       <div className="hidden lg:block absolute top-1/4 -right-24 w-48 h-48 rounded-full border-4 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/4 -left-32 w-64 h-64 rounded-full border-6 border-pearl-white/10 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute top-20 left-20 w-32 h-32 rounded-full border-2 border-dusty-mauve/20 z-0 animate-fade-in"></div>
+      
       <div className="max-w-7xl mx-auto px-8 lg:px-12 py-24">
         <div className="grid lg:grid-cols-4 gap-16 relative z-10">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-4 mb-10">
-              <div className="bg-deep-burgundy/20 p-3 rounded-full">
-                <Scissors className="h-8 w-8 text-deep-burgundy" />
+              <div className="bg-dusty-mauve/20 p-3 rounded-full">
+                <Scissors className="h-8 w-8 text-dusty-mauve" />
               </div>
               <span className="font-playfair text-3xl font-light tracking-wide">
-                Studio Fryzur Elegance
+                  Atelier Fryzur
               </span>
             </div>
             <p className="font-crimson text-pearl-white/80 leading-relaxed mb-10 text-lg max-w-lg">
@@ -73,7 +75,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-4">
                 <Mail className="h-6 w-6 text-dusty-mauve" />
-                <span className="font-crimson text-pearl-white/80 text-lg">kontakt@studioelegance.pl</span>
+                <span className="font-crimson text-pearl-white/80 text-lg">atelierfryzurmm@interia.pl</span>
               </div>
               
               {/* Social Media */}
@@ -82,13 +84,13 @@ const Footer: React.FC = () => {
                 <div className="flex space-x-6">
                   <a
                     href="#"
-                    className="bg-pearl-white/10 hover:bg-deep-burgundy p-4 rounded-full transition-all duration-300 transform hover:scale-110"
+                    className="bg-pearl-white/10 hover:bg-dusty-mauve text-pearl-white hover:text-pearl-white p-4 rounded-full transition-all duration-300 transform hover:scale-110"
                   >
                     <Instagram className="h-6 w-6" />
                   </a>
                   <a
                     href="#"
-                    className="bg-pearl-white/10 hover:bg-deep-burgundy p-4 rounded-full transition-all duration-300 transform hover:scale-110"
+                    className="bg-pearl-white/10 hover:bg-dusty-mauve text-pearl-white hover:text-pearl-white p-4 rounded-full transition-all duration-300 transform hover:scale-110"
                   >
                     <Facebook className="h-6 w-6" />
                   </a>
@@ -102,7 +104,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-pearl-white/20 mt-20 pt-12">
           <div className="flex flex-col lg:flex-row justify-between items-center relative z-10">
             <p className="font-crimson text-pearl-white/60 text-lg">
-              © 2024 Studio Fryzur Elegance. Wszystkie prawa zastrzeżone.
+              © 2025 Atelier Fryzur Mariola Michnowska. Wszystkie prawa zastrzeżone.
             </p>
             <div className="flex items-center space-x-8 mt-8 lg:mt-0 text-pearl-white/60">
               <a href="#" className="hover:text-dusty-mauve transition-colors duration-300 font-crimson">

@@ -21,18 +21,14 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-luxury-gradient"></div>
       </div>
 
-      {/* Decorative Gold Lines */}
-      <div className="absolute top-1/4 left-0 w-32 h-px bg-gold-accent opacity-60"></div>
-      <div className="absolute bottom-1/4 right-0 w-32 h-px bg-gold-accent opacity-60"></div>
-
       {/* Content */}
       <div className="relative z-10 text-center px-8 animate-fade-in-up">
         <h1 className="font-playfair text-hero font-light text-pearl-white mb-8 leading-none tracking-tight">
-          Studio Fryzur
-          <span className="block font-extralight italic">Elegance</span>
+        Atelier Fryzur
+          <span className="block font-extralight italic">Mariola Michnowska</span>
         </h1>
         
-        <div className="w-24 h-px bg-gold-accent mx-auto mb-8"></div>
+        <div className="w-24 h-px bg-dusty-mauve mx-auto mb-8"></div>
         
         <p className="font-crimson text-2xl text-pearl-white/90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
           Twoje włosy, nasza pasja

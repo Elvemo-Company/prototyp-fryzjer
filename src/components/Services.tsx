@@ -47,9 +47,17 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" className="py-32 bg-gradient-to-br from-dusty-mauve/40 via-pearl-white/90 to-dusty-mauve/40 relative overflow-hidden">
-      {/* Dekoracyjne okręgi */}
+      {/* Dekoracyjne okręgi - więcej okręgów + dodatkowe duże kółko na górze po lewej */}
       <div className="hidden lg:block absolute top-1/4 -left-28 w-56 h-56 rounded-full border-6 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/4 -right-36 w-72 h-72 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute top-16 right-16 w-32 h-32 rounded-full border-2 border-dusty-mauve/20 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute bottom-16 left-16 w-40 h-40 rounded-full border-3 border-pearl-white/30 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute top-1/2 right-1/6 w-24 h-24 rounded-full border-2 border-deep-burgundy/15 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute bottom-1/3 left-1/6 w-28 h-28 rounded-full border-2 border-dusty-mauve/25 z-0 animate-fade-in"></div>
+      
+      {/* Dodatkowe duże kółko na górze po lewej */}
+      <div className="hidden lg:block absolute top-16 -left-20 w-64 h-64 rounded-full border-5 border-pearl-white/40 z-0 animate-fade-in"></div>
+      
       <div className="max-w-6xl mx-auto px-8 lg:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-28 animate-fade-in-up">

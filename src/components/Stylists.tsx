@@ -1,27 +1,30 @@
 import React from 'react';
 import { Scissors, Palette, Star } from 'lucide-react';
+import fryzjerka1 from '../assets/fryzjerka1.png';
+import fryzjerka2 from '../assets/fryzjerka2.png';
+import fryzjerka3 from '../assets/fryzjerka3.png';
 
 const Stylists: React.FC = () => {
   const stylists = [
     {
-      name: "Anna Kowalska",
+      name: "Fryzjerka 1",
       specialization: "Koloryzacja i refleksy",
       bio: "Specjalistka od koloryzacji z 15-letnim doświadczeniem. Uwielbia tworzyć naturalne, ale efektowne przejścia kolorów.",
-      image: "https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+      image: fryzjerka1,
       icon: <Palette className="h-6 w-6" />
     },
     {
-      name: "Marta Nowak",
+      name: "Fryzjerka 2",
       specialization: "Strzyżenie i stylizacja",
       bio: "Artystka fryzjerstwa, która potrafi idealnie dopasować strzyżenie do kształtu twarzy. Specjalizuje się w modnych cięciach.",
-      image: "https://images.pexels.com/photos/3762873/pexels-photo-3762873.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+      image: fryzjerka2,
       icon: <Scissors className="h-6 w-6" />
     },
     {
-      name: "Katarzyna Wiśniewska",
+      name: "Fryzjerka 3",
       specialization: "Pielęgnacja i regeneracja",
       bio: "Ekspertka w dziedzinie pielęgnacji włosów. Specjalizuje się w zabiegach regenerujących i keratynowych.",
-      image: "https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop",
+      image: fryzjerka3,
       icon: <Star className="h-6 w-6" />
     }
   ];

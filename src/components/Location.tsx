@@ -10,16 +10,19 @@ const Location: React.FC = () => {
   ];
 
   const openGoogleMaps = () => {
-    const address = "ul. Piękna 15, 00-001 Warszawa";
+    const address = "ul. Łodygowa 3, Warsaw, Poland, 03-687";
     const encodedAddress = encodeURIComponent(address);
     window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
   };
 
   return (
     <section id="location" className="py-32 bg-gradient-to-br from-dusty-mauve/40 via-pearl-white/90 to-deep-burgundy/20 relative overflow-hidden">
-      {/* Dekoracyjne okręgi bliżej środka */}
-      <div className="hidden lg:block absolute top-1/4 left-1/4 w-72 h-72 rounded-full border-8 border-dusty-mauve/30 z-0 animate-fade-in"></div>
-      <div className="hidden lg:block absolute bottom-1/4 right-1/4 w-56 h-56 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
+      {/* Dekoracyjne okręgi - większe kółka z odpowiednimi odległościami */}
+      <div className="hidden lg:block absolute top-20 -left-20 w-72 h-72 rounded-full border-8 border-dusty-mauve/30 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute bottom-20 -right-20 w-56 h-56 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute top-1/2 -left-8 w-40 h-40 rounded-full border-3 border-pearl-white/30 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute bottom-1/3 -right-8 w-32 h-32 rounded-full border-2 border-dusty-mauve/20 z-0 animate-fade-in"></div>
+      
       <div className="max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-28 animate-fade-in-up">
@@ -28,7 +31,7 @@ const Location: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-dusty-mauve mx-auto mb-12 rounded-full animate-fade-in"></div>
           <p className="font-crimson text-large text-rich-black/80 max-w-3xl mx-auto leading-relaxed">
-            Znajdź nas w centrum Warszawy i umów się na wizytę już dziś
+            Znajdź nas w Warszawie i umów się na wizytę już dziś
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-20">
@@ -41,7 +44,7 @@ const Location: React.FC = () => {
               <div className="h-96 w-full relative z-10">
                 <iframe
                   title="Mapa Studio Fryzur Elegance"
-                  src="https://www.google.com/maps?q=ul.+Piękna+15,+00-001+Warszawa&output=embed"
+                  src="https://www.google.com/maps?q=ul.+Łodygowa+3,+Warsaw,+Poland,+03-687&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -54,7 +57,7 @@ const Location: React.FC = () => {
               <div className="flex justify-center py-6">
                 <button
                   onClick={openGoogleMaps}
-                  className="inline-flex items-center space-x-3 bg-deep-burgundy hover:bg-dusty-mauve text-pearl-white px-10 py-4 font-playfair font-semibold text-lg transition-all duration-300 shadow-luxury hover:shadow-elegant transform hover:scale-105 rounded-xl tracking-wide"
+                  className="inline-flex items-center space-x-3 bg-dusty-mauve hover:bg-dusty-mauve/80 text-pearl-white px-10 py-4 font-playfair font-semibold text-lg transition-all duration-300 shadow-luxury hover:shadow-elegant transform hover:scale-105 rounded-xl tracking-wide"
                 >
                   <ExternalLink className="h-5 w-5" />
                   <span>Otwórz w Google Maps</span>
@@ -69,17 +72,17 @@ const Location: React.FC = () => {
               <div className="grid grid-cols-2 gap-8 max-w-xs mx-auto">
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center bg-dusty-mauve/10 hover:bg-dusty-mauve hover:text-pearl-white p-5 rounded-full transition-all duration-300 transform hover:scale-110 shadow-elegant"
+                  className="flex flex-col items-center justify-center bg-dusty-mauve/10 hover:bg-dusty-mauve hover:text-pearl-white text-dusty-mauve p-5 rounded-full transition-all duration-300 transform hover:scale-110 shadow-elegant"
                 >
                   <Instagram className="h-8 w-8 mb-2" />
-                  <span className="font-crimson text-dusty-mauve text-lg">Instagram</span>
+                  <span className="font-crimson text-lg">Instagram</span>
                 </a>
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center bg-dusty-mauve/10 hover:bg-dusty-mauve hover:text-pearl-white p-5 rounded-full transition-all duration-300 transform hover:scale-110 shadow-elegant"
+                  className="flex flex-col items-center justify-center bg-dusty-mauve/10 hover:bg-dusty-mauve hover:text-pearl-white text-dusty-mauve p-5 rounded-full transition-all duration-300 transform hover:scale-110 shadow-elegant"
                 >
                   <Facebook className="h-8 w-8 mb-2" />
-                  <span className="font-crimson text-dusty-mauve text-lg">Facebook</span>
+                  <span className="font-crimson text-lg">Facebook</span>
                 </a>
               </div>
             </div>
@@ -108,7 +111,7 @@ const Location: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-playfair font-medium text-rich-black text-xl mb-1">Email</p>
-                    <p className="font-crimson text-rich-black/70 text-lg">kontakt@studioelegance.pl</p>
+                    <p className="font-crimson text-rich-black/70 text-lg">atelierfryzurmm@interia.pl</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-6">
@@ -117,7 +120,7 @@ const Location: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-playfair font-medium text-rich-black text-xl mb-1">Adres</p>
-                    <p className="font-crimson text-rich-black/70 text-lg">ul. Piękna 15, 00-001 Warszawa</p>
+                    <p className="font-crimson text-rich-black/70 text-lg">ul. Łodygowa 3, 03-687 Warszawa</p>
                   </div>
                 </div>
               </div>
