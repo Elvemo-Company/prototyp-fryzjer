@@ -1,0 +1,125 @@
+import React from 'react';
+import { Scissors, Palette, Wind, Sparkles } from 'lucide-react';
+
+const Services: React.FC = () => {
+  const services = [
+    {
+      category: "Strzyżenie damskie",
+      icon: <Scissors className="h-8 w-8" />,
+      services: [
+        { name: "Strzyżenie + modelowanie", price: "80-120 PLN" },
+        { name: "Strzyżenie grzywki", price: "30 PLN" },
+        { name: "Strzyżenie z myciem", price: "100-140 PLN" },
+        { name: "Konsultacja stylisty", price: "50 PLN" }
+      ]
+    },
+    {
+      category: "Koloryzacja",
+      icon: <Palette className="h-8 w-8" />,
+      services: [
+        { name: "Koloryzacja całości", price: "200-400 PLN" },
+        { name: "Refleksy/pasemka", price: "250-350 PLN" },
+        { name: "Baleyage/Ombre", price: "300-500 PLN" },
+        { name: "Tuszowanie siwizny", price: "150-200 PLN" }
+      ]
+    },
+    {
+      category: "Modelowanie",
+      icon: <Wind className="h-8 w-8" />,
+      services: [
+        { name: "Modelowanie + stylizacja", price: "60-80 PLN" },
+        { name: "Lokowanie", price: "80-100 PLN" },
+        { name: "Prostowanie", price: "70-90 PLN" },
+        { name: "Upięcie okolicznościowe", price: "120-180 PLN" }
+      ]
+    },
+    {
+      category: "Pielęgnacja",
+      icon: <Sparkles className="h-8 w-8" />,
+      services: [
+        { name: "Keratynowe prostowanie", price: "400-600 PLN" },
+        { name: "Botox do włosów", price: "250-350 PLN" },
+        { name: "Regeneracja Olaplex", price: "200-280 PLN" },
+        { name: "Maska proteinowa", price: "80-120 PLN" }
+      ]
+    }
+  ];
+
+  return (
+    <section id="services" className="py-32 bg-gradient-to-br from-dusty-mauve/40 via-pearl-white/90 to-dusty-mauve/40 relative overflow-hidden">
+      {/* Dekoracyjne okręgi */}
+      <div className="hidden lg:block absolute top-1/4 -left-28 w-56 h-56 rounded-full border-6 border-dusty-mauve/30 z-0 animate-fade-in"></div>
+      <div className="hidden lg:block absolute bottom-1/4 -right-36 w-72 h-72 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
+      <div className="max-w-6xl mx-auto px-8 lg:px-12 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-28 animate-fade-in-up">
+          <h2 className="font-playfair text-display font-light mb-8 tracking-tight bg-gradient-to-r from-dusty-mauve via-deep-burgundy to-dusty-mauve bg-clip-text text-transparent">
+            Usługi i Cennik
+          </h2>
+          <div className="w-24 h-1 bg-dusty-mauve mx-auto mb-12 rounded-full animate-fade-in"></div>
+          <p className="font-crimson text-large text-rich-black/80 max-w-3xl mx-auto leading-relaxed">
+            Oferujemy pełen zakres profesjonalnych usług fryzjerskich w konkurencyjnych cenach
+          </p>
+        </div>
+        {/* Services Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 animate-fade-in-up">
+          {services.map((category, index) => (
+            <div key={index} className="group animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="bg-pearl-white/90 border border-dusty-mauve/30 rounded-3xl shadow-elegant hover:shadow-luxury transition-all duration-500 transform hover:scale-105 overflow-hidden">
+                {/* Category Header */}
+                <div className="bg-deep-burgundy/50 p-8 rounded-t-3xl">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-pearl-white/20 p-4 rounded-full">
+                      <div className="text-pearl-white">
+                        {category.icon}
+                      </div>
+                    </div>
+                    <h3 className="font-playfair text-2xl font-medium text-pearl-white">
+                      {category.category}
+                    </h3>
+                  </div>
+                </div>
+                {/* Services List */}
+                <div className="p-8">
+                  <div className="space-y-6">
+                    {category.services.map((service, serviceIndex) => (
+                      <div
+                        key={serviceIndex}
+                        className={`flex justify-between items-center py-4 px-6 transition-colors duration-300 rounded-xl ${
+                          serviceIndex % 2 === 0 ? 'bg-pearl-white/80' : 'bg-dusty-mauve/10'
+                        } hover:bg-dusty-mauve/20`}
+                      >
+                        <span className="font-crimson text-rich-black font-medium text-lg">
+                          {service.name}
+                        </span>
+                        <span className="font-playfair text-dusty-mauve font-semibold text-xl">
+                          {service.price}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-20">
+          <p className="font-crimson text-rich-black/70 mb-8 text-lg">
+            Ceny mogą się różnić w zależności od długości i typu włosów
+          </p>
+          <div className="inline-flex items-center space-x-4 bg-dusty-mauve/10 px-12 py-6 border border-dusty-mauve/20">
+            <Sparkles className="h-6 w-6 text-deep-burgundy" />
+            <span className="font-playfair text-deep-burgundy font-medium text-xl">
+              Konsultacja zawsze bezpłatna
+            </span>
+            <Sparkles className="h-6 w-6 text-deep-burgundy" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;

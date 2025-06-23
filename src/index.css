@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Łagodne przejścia między sekcjami */
+section {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dodatkowe style dla płynnych animacji */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Opcjonalne: fade-in efekt dla sekcji podczas scrollowania */
+@media (prefers-reduced-motion: no-preference) {
+  section {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
