@@ -46,7 +46,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-32 bg-gradient-to-br from-dusty-mauve/40 via-pearl-white/90 to-dusty-mauve/40 relative overflow-hidden">
+    <section id="services" className="py-32 relative overflow-hidden">
       {/* Dekoracyjne okręgi - więcej okręgów + dodatkowe duże kółko na górze po lewej */}
       <div className="hidden lg:block absolute top-1/4 -left-28 w-56 h-56 rounded-full border-6 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/4 -right-36 w-72 h-72 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>

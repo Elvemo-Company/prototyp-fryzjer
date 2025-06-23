@@ -30,7 +30,7 @@ const Stylists: React.FC = () => {
   ];
 
   return (
-    <section id="stylists" className="py-32 bg-gradient-to-br from-dusty-mauve/40 via-pearl-white/90 to-dusty-mauve/40 relative overflow-hidden">
+    <section id="stylists" className="py-32 relative overflow-hidden">
       {/* Dekoracyjne okręgi */}
       <div className="hidden lg:block absolute top-1/3 -right-32 w-64 h-64 rounded-full border-8 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/3 -left-40 w-80 h-80 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>

@@ -3,7 +3,7 @@ import { Award, Heart, Users } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-32 bg-gradient-to-br from-dusty-mauve/40 via-pearl-white/90 to-dusty-mauve/60 relative overflow-hidden">
+    <section id="about" className="py-32 relative overflow-hidden">
       {/* Dekoracyjne okręgi */}
       <div className="hidden lg:block absolute top-1/4 -left-32 w-72 h-72 rounded-full border-8 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/4 -right-28 w-56 h-56 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>

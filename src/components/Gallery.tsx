@@ -43,7 +43,7 @@ const Gallery: React.FC = () => {
   ];
 
   return (
-    <section id="gallery" className="py-32 bg-gradient-to-br from-dusty-mauve/40 via-pearl-white/90 to-dusty-mauve/40 relative overflow-hidden">
+    <section id="gallery" className="py-32 relative overflow-hidden">
       {/* Dekoracyjne okręgi - więcej okręgów */}
       <div className="hidden lg:block absolute top-1/3 -left-24 w-64 h-64 rounded-full border-6 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/3 -right-20 w-48 h-48 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
