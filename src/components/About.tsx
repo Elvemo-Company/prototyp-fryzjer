@@ -9,17 +9,73 @@ const About: React.FC = () => {
       <div className="hidden lg:block absolute bottom-1/4 -right-28 w-56 h-56 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
       <div className="max-w-6xl mx-auto px-4 xs:px-6 sm:px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 sm:mb-24 lg:mb-28 animate-fade-in-up">
+        <div className="text-center mb-8 md:mb-16 sm:mb-24 lg:mb-28 animate-fade-in-up">
           <h2 className="font-playfair text-2xl xs:text-3xl sm:text-display font-light mb-4 sm:mb-8 tracking-tight bg-gradient-to-r from-dusty-mauve via-deep-burgundy to-dusty-mauve bg-clip-text text-transparent">
             O nas
           </h2>
-          <div className="w-16 h-1 sm:w-24 bg-dusty-mauve mx-auto mb-6 sm:mb-12 rounded-full animate-fade-in"></div>
-          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-4xl mx-auto leading-relaxed">
+          <div className="w-16 h-1 sm:w-24 bg-dusty-mauve mx-auto mb-4 md:mb-6 sm:mb-12 rounded-full animate-fade-in"></div>
+          
+          {/* Mobile compact intro text */}
+          <p className="md:hidden font-crimson text-sm text-rich-black/90 max-w-xs mx-auto leading-relaxed px-4">
+            Atelier Fryzur Mariola Michnowska - rzemiosło spotyka nowoczesność. Ponad 10 lat doświadczenia w tworzeniu wyjątkowych stylizacji.
+          </p>
+          
+          {/* Desktop intro text */}
+          <p className="hidden md:block font-crimson text-base xs:text-lg sm:text-large text-rich-black/90 max-w-xs xs:max-w-md sm:max-w-4xl mx-auto leading-relaxed">
             Atelier Fryzur Mariola Michnowska to miejsce, gdzie tradycyjne rzemiosło fryzjerskie spotyka się z nowoczesnymi trendami. Od ponad 10 lat tworzymy wyjątkowe stylizacje, które podkreślają naturalną piękność naszych klientek.
           </p>
         </div>
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-md sm:max-w-none mx-auto px-0 xs:px-2 animate-fade-in-up">
+
+        {/* Mobile Compact Features - Icon Grid */}
+        <div className="md:hidden animate-fade-in-up">
+          {/* Icon Grid Layout */}
+          <div className="flex justify-center items-center space-x-8 mb-6">
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-br from-dusty-mauve to-dusty-mauve/80 rounded-full flex items-center justify-center mb-2 shadow-soft group-hover:scale-105 transition-transform duration-300">
+                <Award className="h-6 w-6 text-white" />
+              </div>
+              <span className="font-playfair text-xs font-semibold text-dusty-mauve">Profesjonalizm</span>
+            </div>
+            
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-br from-dusty-mauve to-dusty-mauve/80 rounded-full flex items-center justify-center mb-2 shadow-soft group-hover:scale-105 transition-transform duration-300">
+                <Heart className="h-6 w-6 text-white" />
+              </div>
+              <span className="font-playfair text-xs font-semibold text-dusty-mauve">Indywidualność</span>
+            </div>
+            
+            <div className="flex flex-col items-center group cursor-pointer">
+              <div className="w-12 h-12 bg-gradient-to-br from-dusty-mauve to-dusty-mauve/80 rounded-full flex items-center justify-center mb-2 shadow-soft group-hover:scale-105 transition-transform duration-300">
+                <Users className="h-6 w-6 text-white" />
+              </div>
+              <span className="font-playfair text-xs font-semibold text-dusty-mauve">Atmosfera</span>
+            </div>
+          </div>
+          
+          {/* Compact descriptions below */}
+          <div className="bg-pearl-white/50 rounded-xl p-4 mx-2">
+            <div className="grid grid-cols-1 gap-3 text-center">
+              <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
+                <p className="font-crimson text-xs text-rich-black/85 leading-relaxed">
+                  <span className="font-semibold text-dusty-mauve">Profesjonalizm:</span> Doświadczeni styliści z międzynarodowymi certyfikatami
+                </p>
+              </div>
+              <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
+                <p className="font-crimson text-xs text-rich-black/85 leading-relaxed">
+                  <span className="font-semibold text-dusty-mauve">Indywidualność:</span> Stylizacje dostosowane do Twojej osobowości
+                </p>
+              </div>
+              <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
+                <p className="font-crimson text-xs text-rich-black/85 leading-relaxed">
+                  <span className="font-semibold text-dusty-mauve">Atmosfera:</span> Przytulne wnętrze i chwile relaksu
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Features Grid - unchanged */}
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-md sm:max-w-none mx-auto px-0 xs:px-2 animate-fade-in-up">
           <div
             className="text-center group bg-pearl-white/95 border border-dusty-mauve/30 rounded-2xl sm:rounded-3xl shadow-elegant p-6 xs:p-8 sm:p-10 hover:shadow-luxury transition-all duration-500 animate-fade-in-up mx-auto"
             style={{ width: '359px', maxWidth: '100%' }}
