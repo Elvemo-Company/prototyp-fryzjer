@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
 
 const Gallery: React.FC = () => {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-
   const galleryImages = [
     {
       src: "/src/assets/galery1.jpg",
@@ -37,32 +34,6 @@ const Gallery: React.FC = () => {
     }
   ];
 
-  const openLightbox = (index: number) => {
-    setSelectedImage(index);
-  };
-
-  const closeLightbox = () => {
-    setSelectedImage(null);
-  };
-
-  const goToPrevious = () => {
-    if (selectedImage !== null) {
-      setSelectedImage(selectedImage > 0 ? selectedImage - 1 : galleryImages.length - 1);
-    }
-  };
-
-  const goToNext = () => {
-    if (selectedImage !== null) {
-      setSelectedImage(selectedImage < galleryImages.length - 1 ? selectedImage + 1 : 0);
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') goToPrevious();
-    if (e.key === 'ArrowRight') goToNext();
-  };
-
   return (
     <section id="gallery" className="py-32 bg-gradient-to-br from-dusty-mauve/40 via-pearl-white/90 to-dusty-mauve/40 relative overflow-hidden">
       {/* Dekoracyjne okręgi - więcej okręgów */}
@@ -89,8 +60,7 @@ const Gallery: React.FC = () => {
           {galleryImages.map((image, index) => (
             <div 
               key={index} 
-              className="group relative overflow-hidden shadow-elegant hover:shadow-luxury transition-all duration-500 break-inside-avoid bg-pearl-white/90 border border-dusty-mauve/20 rounded-3xl cursor-pointer"
-              onClick={() => openLightbox(index)}
+              className="group relative overflow-hidden shadow-elegant hover:shadow-luxury transition-all duration-500 break-inside-avoid bg-pearl-white/90 border border-dusty-mauve/20 rounded-3xl"
             >
               <div className={`${image.tall ? 'aspect-[3/4]' : 'aspect-square'}`}>
                 <img
@@ -98,71 +68,13 @@ const Gallery: React.FC = () => {
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 rounded-3xl"
                 />
-                {/* Hover Overlay - simplified */}
+                {/* Hover Overlay - różowy efekt */}
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-burgundy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-pearl-white/20 p-3 rounded-full backdrop-blur-sm">
-                      <svg className="w-8 h-8 text-pearl-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                      </svg>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Lightbox */}
-        {selectedImage !== null && (
-          <div 
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
-            onClick={closeLightbox}
-            onKeyDown={handleKeyDown}
-            tabIndex={0}
-          >
-            {/* Close button */}
-            <button
-              onClick={closeLightbox}
-              className="absolute top-6 right-6 text-pearl-white hover:text-dusty-mauve p-3 bg-black/50 rounded-full transition-colors duration-300"
-            >
-              <X className="w-8 h-8" />
-            </button>
-
-            {/* Previous button */}
-            <button
-              onClick={goToPrevious}
-              className="absolute left-6 text-pearl-white hover:text-dusty-mauve p-3 bg-black/50 rounded-full transition-colors duration-300"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </button>
-
-            {/* Next button */}
-            <button
-              onClick={goToNext}
-              className="absolute right-6 text-pearl-white hover:text-dusty-mauve p-3 bg-black/50 rounded-full transition-colors duration-300"
-            >
-              <ChevronRight className="w-8 h-8" />
-            </button>
-
-            {/* Image */}
-            <div className="max-w-4xl max-h-screen p-6 w-full h-full flex items-center justify-center">
-              <img
-                src={galleryImages[selectedImage].src}
-                alt={galleryImages[selectedImage].alt}
-                className="max-w-full max-h-full object-contain rounded-2xl"
-                onClick={(e) => e.stopPropagation()}
-              />
-            </div>
-
-            {/* Image counter */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-pearl-white bg-black/50 px-4 py-2 rounded-full">
-              <span className="font-crimson text-lg">
-                {selectedImage + 1} / {galleryImages.length}
-              </span>
-            </div>
-          </div>
-        )}
 
         {/* Call to Action */}
         <div className="text-center mt-20 animate-fade-in-up">
