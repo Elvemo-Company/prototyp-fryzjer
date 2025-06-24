@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                   Atelier Fryzur
               </span>
             </div>
-            <p className="font-crimson text-pearl-white/80 leading-relaxed mb-10 text-lg max-w-lg">
+            <p className="font-crimson text-pearl-white leading-relaxed mb-10 text-lg max-w-lg">
               Twoje włosy, nasza pasja. Od ponad 10 lat tworzymy wyjątkowe stylizacje 
               w sercu Warszawy, łącząc tradycyjne rzemiosło z nowoczesnymi trendami.
             </p>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    className="font-crimson text-pearl-white/80 hover:text-dusty-mauve transition-colors duration-300 text-base lg:text-lg relative group"
+                    className="font-crimson text-pearl-white hover:text-dusty-mauve transition-colors duration-300 text-base lg:text-lg relative group"
                   >
                     {link.label}
                     <span className="absolute bottom-0 left-0 w-0 h-px bg-dusty-mauve transition-all duration-300 group-hover:w-full"></span>
@@ -71,16 +71,16 @@ const Footer: React.FC = () => {
             <div className="space-y-4 lg:space-y-6">
               <div className="flex items-center space-x-3 lg:space-x-4">
                 <Phone className="h-5 w-5 lg:h-6 lg:w-6 text-dusty-mauve" />
-                <span className="font-crimson text-pearl-white/80 text-sm lg:text-lg">+48 791 779 784</span>
+                <span className="font-crimson text-pearl-white text-sm lg:text-lg">+48 791 779 784</span>
               </div>
               <div className="flex items-center space-x-3 lg:space-x-4">
                 <Mail className="h-5 w-5 lg:h-6 lg:w-6 text-dusty-mauve" />
-                <span className="font-crimson text-pearl-white/80 text-sm lg:text-lg">atelierfryzurmm@interia.pl</span>
+                <span className="font-crimson text-pearl-white text-sm lg:text-lg">atelierfryzurmm@interia.pl</span>
               </div>
               
               {/* Social Media */}
               <div className="pt-4 lg:pt-8">
-                <p className="font-crimson text-pearl-white/60 mb-4 lg:mb-6 text-sm lg:text-lg">Śledź nas:</p>
+                <p className="font-crimson text-pearl-white/80 mb-4 lg:mb-6 text-sm lg:text-lg">Śledź nas:</p>
                 <div className="flex space-x-4 lg:space-x-6">
                   <a
                     href="#"
@@ -103,10 +103,10 @@ const Footer: React.FC = () => {
                  {/* Bottom Section */}
          <div className="border-t border-pearl-white/20 mt-6 lg:mt-20 pt-4 lg:pt-12">
           <div className="flex flex-col lg:flex-row justify-between items-center relative z-10">
-            <p className="font-crimson text-pearl-white/60 text-lg">
+            <p className="font-crimson text-pearl-white/80 text-lg">
               © 2025 Atelier Fryzur Mariola Michnowska. Wszystkie prawa zastrzeżone.
             </p>
-            <div className="flex items-center space-x-8 mt-8 lg:mt-0 text-pearl-white/60">
+            <div className="flex items-center space-x-8 mt-8 lg:mt-0 text-pearl-white/80">
               <a href="#" className="hover:text-dusty-mauve transition-colors duration-300 font-crimson">
                 Polityka prywatności
               </a>

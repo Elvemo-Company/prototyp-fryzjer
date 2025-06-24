@@ -41,7 +41,7 @@ const Stylists: React.FC = () => {
             Poznaj nasze fryzjerki
           </h2>
           <div className="w-16 h-1 sm:w-24 bg-dusty-mauve mx-auto mb-6 sm:mb-12 rounded-full animate-fade-in"></div>
-          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-4xl mx-auto leading-relaxed">
+          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black max-w-xs xs:max-w-md sm:max-w-4xl mx-auto leading-relaxed">
             Nasz zespół to pasjonaci, którzy każdego dnia tworzą wyjątkowe stylizacje
           </p>
         </div>
@@ -72,7 +72,7 @@ const Stylists: React.FC = () => {
                     {stylist.name}
                   </h3>
                   <div className="w-12 h-px bg-dusty-mauve mb-6"></div>
-                  <p className="font-crimson text-rich-black/70 leading-relaxed">
+                  <p className="font-crimson text-rich-black leading-relaxed">
                     {stylist.bio}
                   </p>
                 </div>
@@ -112,7 +112,7 @@ const Stylists: React.FC = () => {
                     {stylist.name}
                   </h3>
                   <div className="w-10 h-px bg-dusty-mauve mb-4"></div>
-                  <p className="font-crimson text-rich-black/70 leading-relaxed text-sm">
+                  <p className="font-crimson text-rich-black leading-relaxed text-sm">
                     {stylist.bio}
                   </p>
                 </div>

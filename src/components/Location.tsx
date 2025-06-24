@@ -40,7 +40,7 @@ const Location: React.FC = () => {
             Lokalizacja <span className="text-dusty-mauve">i Kontakt</span>
           </h2>
           <div className="w-16 h-1 sm:w-24 bg-dusty-mauve mx-auto mb-6 sm:mb-12 rounded-full animate-fade-in"></div>
-          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-3xl mx-auto leading-relaxed">
+          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black max-w-xs xs:max-w-md sm:max-w-3xl mx-auto leading-relaxed">
             Znajdź nas w Warszawie i umów się na wizytę już dziś
           </p>
         </div>
@@ -85,7 +85,7 @@ const Location: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-playfair font-medium text-rich-black text-lg">ul. Łodygowa 3</p>
-                  <p className="font-crimson text-rich-black/70 text-sm">03-687 Warszawa</p>
+                  <p className="font-crimson text-rich-black text-sm">03-687 Warszawa</p>
                 </div>
               </div>
               
@@ -98,7 +98,7 @@ const Location: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-playfair font-medium text-rich-black text-lg">+48 791 779 784</p>
-                  <p className="font-crimson text-rich-black/70 text-sm">Kliknij aby zadzwonić</p>
+                  <p className="font-crimson text-rich-black text-sm">Kliknij aby zadzwonić</p>
                 </div>
               </button>
               
@@ -111,7 +111,7 @@ const Location: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-playfair font-medium text-rich-black text-lg break-all">atelierfryzurmm@interia.pl</p>
-                  <p className="font-crimson text-rich-black/70 text-sm">Wyślij email</p>
+                  <p className="font-crimson text-rich-black text-sm">Wyślij email</p>
                 </div>
               </button>
             </div>
@@ -129,7 +129,7 @@ const Location: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-playfair text-xl font-medium text-rich-black">Godziny otwarcia</h3>
-                  <p className="font-crimson text-rich-black/70 text-sm">Poniedziałek - Sobota</p>
+                  <p className="font-crimson text-rich-black text-sm">Poniedziałek - Sobota</p>
                 </div>
               </div>
               <div className={`transition-transform duration-300 chevron-rotate ${

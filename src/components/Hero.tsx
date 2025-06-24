@@ -41,11 +41,11 @@ const Hero: React.FC = () => {
         {/* Mobile Divider */}
         <div className="w-12 h-px bg-dusty-mauve mx-auto mb-4 sm:hidden"></div>
         {/* Slogan */}
-        <p className="font-crimson text-lg xs:text-xl text-pearl-white/90 mb-6 max-w-xs xs:max-w-sm mx-auto font-light leading-snug sm:text-2xl sm:mb-12">
+        <p className="font-crimson text-lg xs:text-xl text-pearl-white mb-6 max-w-xs xs:max-w-sm mx-auto font-light leading-snug sm:text-2xl sm:mb-12">
           Twoje włosy, nasza pasja
         </p>
          {/* Description */}
-        <p className="font-crimson text-base xs:text-lg sm:text-xl text-pearl-white/80 mb-8 sm:mb-16 max-w-xs xs:max-w-md md:max-w-3xl mx-auto leading-normal md:text-center">
+        <p className="font-crimson text-base xs:text-lg sm:text-xl text-pearl-white/95 mb-8 sm:mb-16 max-w-xs xs:max-w-md md:max-w-3xl mx-auto leading-normal md:text-center">
           <span className="md:inline-block md:w-auto">
             Odkryj wyjątkowe doświadczenie w naszym salonie, gdzie profesjonalizm spotyka się z elegancją
           </span>
@@ -85,8 +85,8 @@ const Hero: React.FC = () => {
       </div>
       {/* Scroll Indicator */}
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce sm:bottom-12">
-        <div className="w-5 h-10 border-2 border-pearl-white/60 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-pearl-white/70 rounded-full mt-1 animate-pulse"></div>
+        <div className="w-5 h-10 border-2 border-pearl-white/80 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-pearl-white/90 rounded-full mt-1 animate-pulse"></div>
         </div>
       </div>
     </section>

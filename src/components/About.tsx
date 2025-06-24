@@ -16,12 +16,12 @@ const About: React.FC = () => {
           <div className="w-16 h-1 sm:w-24 bg-dusty-mauve mx-auto mb-4 md:mb-6 sm:mb-12 rounded-full animate-fade-in"></div>
           
           {/* Mobile compact intro text */}
-          <p className="md:hidden font-crimson text-sm text-rich-black/90 max-w-xs mx-auto leading-relaxed px-4">
+          <p className="md:hidden font-crimson text-sm text-rich-black max-w-xs mx-auto leading-relaxed px-4">
             Atelier Fryzur Mariola Michnowska - rzemiosło spotyka nowoczesność. Ponad 10 lat doświadczenia w tworzeniu wyjątkowych stylizacji.
           </p>
           
           {/* Desktop intro text */}
-          <p className="hidden md:block font-crimson text-base xs:text-lg sm:text-large text-rich-black/90 max-w-xs xs:max-w-md sm:max-w-4xl mx-auto leading-relaxed">
+          <p className="hidden md:block font-crimson text-base xs:text-lg sm:text-large text-rich-black max-w-xs xs:max-w-md sm:max-w-4xl mx-auto leading-relaxed">
             Atelier Fryzur Mariola Michnowska to miejsce, gdzie tradycyjne rzemiosło fryzjerskie spotyka się z nowoczesnymi trendami. Od ponad 10 lat tworzymy wyjątkowe stylizacje, które podkreślają naturalną piękność naszych klientek.
           </p>
         </div>
@@ -56,17 +56,17 @@ const About: React.FC = () => {
           <div className="bg-pearl-white/50 rounded-xl p-4 mx-2">
             <div className="grid grid-cols-1 gap-3 text-center">
               <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
-                <p className="font-crimson text-xs text-rich-black/85 leading-relaxed">
+                <p className="font-crimson text-xs text-rich-black leading-relaxed">
                   <span className="font-semibold text-dusty-mauve">Profesjonalizm:</span> Doświadczeni styliści z międzynarodowymi certyfikatami
                 </p>
               </div>
               <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
-                <p className="font-crimson text-xs text-rich-black/85 leading-relaxed">
+                <p className="font-crimson text-xs text-rich-black leading-relaxed">
                   <span className="font-semibold text-dusty-mauve">Indywidualność:</span> Stylizacje dostosowane do Twojej osobowości
                 </p>
               </div>
               <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
-                <p className="font-crimson text-xs text-rich-black/85 leading-relaxed">
+                <p className="font-crimson text-xs text-rich-black leading-relaxed">
                   <span className="font-semibold text-dusty-mauve">Atmosfera:</span> Przytulne wnętrze i chwile relaksu
                 </p>
               </div>
@@ -86,7 +86,7 @@ const About: React.FC = () => {
             <h3 className="font-playfair text-lg xs:text-xl sm:text-section font-medium text-rich-black mb-4 xs:mb-6 text-center">
             Profesjonalizm
             </h3>
-            <p className="font-crimson text-rich-black/80 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
+            <p className="font-crimson text-rich-black leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
               Nasz zespół składa się z doświadczonych stylistów z międzynarodowymi certyfikatami
             </p>
           </div>
@@ -100,7 +100,7 @@ const About: React.FC = () => {
             <h3 className="font-playfair text-lg xs:text-xl sm:text-section font-medium text-rich-black mb-4 xs:mb-6 text-center">
               Indywidualne podejście
             </h3>
-            <p className="font-crimson text-rich-black/80 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
+            <p className="font-crimson text-rich-black leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
               Każda klientka jest dla nas wyjątkowa. Dostosowujemy stylizacje do osobowości i stylu życia
             </p>
           </div>
@@ -114,7 +114,7 @@ const About: React.FC = () => {
             <h3 className="font-playfair text-lg xs:text-xl sm:text-section font-medium text-rich-black mb-4 xs:mb-6 text-center">
               Atmosfera
             </h3>
-            <p className="font-crimson text-rich-black/80 leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
+            <p className="font-crimson text-rich-black leading-relaxed text-sm xs:text-base lg:text-lg text-center px-2 xs:px-4">
               Przytulne wnętrze i przyjazna atmosfera sprawiają, że każda wizyta to chwila relaksu
             </p>
           </div>
