@@ -5,7 +5,7 @@
 /* Fix for mobile white bars */
 html, body {
   min-height: 100vh;
-  background-color: #2c1810; /* rich-black color */
+  background-color: #000000; /* rich-black color */
   overflow-x: hidden;
 }
 
