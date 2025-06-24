@@ -16,7 +16,7 @@ const Location: React.FC = () => {
   };
 
   return (
-    <section id="location" className="py-32 relative overflow-hidden">
+    <section id="location" className="py-12 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Dekoracyjne okręgi - większe kółka z odpowiednimi odległościami */}
       <div className="hidden lg:block absolute top-20 -left-20 w-72 h-72 rounded-full border-8 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-20 -right-20 w-56 h-56 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
@@ -25,12 +25,12 @@ const Location: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-28 animate-fade-in-up">
-          <h2 className="font-playfair text-display font-light mb-8 tracking-tight bg-gradient-to-r from-dusty-mauve via-deep-burgundy to-pearl-white bg-clip-text text-transparent">
+        <div className="text-center mb-10 xs:mb-14 sm:mb-20 lg:mb-28 animate-fade-in-up">
+          <h2 className="font-playfair text-2xl xs:text-3xl sm:text-display font-light mb-4 sm:mb-8 tracking-tight bg-gradient-to-r from-dusty-mauve via-deep-burgundy to-pearl-white bg-clip-text text-transparent">
             Lokalizacja <span className="text-dusty-mauve">i Kontakt</span>
           </h2>
-          <div className="w-24 h-1 bg-dusty-mauve mx-auto mb-12 rounded-full animate-fade-in"></div>
-          <p className="font-crimson text-large text-rich-black/80 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-16 h-1 sm:w-24 bg-dusty-mauve mx-auto mb-6 sm:mb-12 rounded-full animate-fade-in"></div>
+          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-3xl mx-auto leading-relaxed">
             Znajdź nas w Warszawie i umów się na wizytę już dziś
           </p>
         </div>

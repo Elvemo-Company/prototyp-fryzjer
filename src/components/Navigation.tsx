@@ -164,7 +164,7 @@ const Navigation: React.FC = () => {
       </nav>
 
       {/* Fullscreen Mobile Menu Overlay */}
-      <div className={`lg:hidden fixed inset-0 z-40 transition-all duration-600 ease-out ${
+      <div className={`lg:hidden fixed inset-0 z-40 transition-all duration-800 ease-in-out ${
         isOpen 
           ? 'opacity-100 visible' 
           : 'opacity-0 invisible'
@@ -196,8 +196,8 @@ const Navigation: React.FC = () => {
         {/* Menu Content */}
         <div className="relative h-full flex flex-col justify-between p-6 pt-24">
           {/* Brand Name */}
-          <div className={`text-center mb-8 transition-all duration-400 delay-100 ${
-            isOpen ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-4'
+          <div className={`text-center mb-8 transition-all duration-600 ease-in-out delay-200 ${
+            isOpen ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-2'
           }`}>
             <h1 className="font-playfair text-3xl font-light text-pearl-white mb-2">
               Atelier Fryzur
@@ -213,13 +213,13 @@ const Navigation: React.FC = () => {
             {navItems.map((item, index) => (
               <div
                 key={item.id}
-                className={`group transition-all duration-400 ease-out ${
+                className={`group transition-all duration-700 ease-in-out ${
                   isOpen 
                     ? 'opacity-100 transform translate-x-0 translate-y-0' 
-                    : 'opacity-0 transform translate-y-4'
+                    : 'opacity-0 transform translate-y-1'
                 }`}
                 style={{ 
-                  transitionDelay: isOpen ? `${150 + index * 60}ms` : '0ms' 
+                  transitionDelay: isOpen ? `${300 + index * 120}ms` : '0ms' 
                 }}
               >
                 <button
@@ -253,8 +253,8 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className={`text-center transition-all duration-400 delay-300 ${
-            isOpen ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
+          <div className={`text-center transition-all duration-600 ease-in-out delay-500 ${
+            isOpen ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-2'
           }`}>
             <p className="font-crimson text-pearl-white/80 text-sm mb-4">
               Połącz się z nami

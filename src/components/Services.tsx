@@ -48,7 +48,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-16 xs:py-16 sm:py-24 lg:py-32 relative overflow-hidden">
+    <section id="services" className="py-12 sm:py-24 lg:py-32 relative overflow-hidden">
       {/* Dekoracyjne okręgi - więcej okręgów + dodatkowe duże kółko na górze po lewej */}
       <div className="hidden lg:block absolute top-1/4 -left-28 w-56 h-56 rounded-full border-6 border-dusty-mauve/30 z-0 animate-fade-in"></div>
       <div className="hidden lg:block absolute bottom-1/4 -right-36 w-72 h-72 rounded-full border-4 border-deep-burgundy/10 z-0 animate-fade-in"></div>
@@ -97,14 +97,13 @@ const Services: React.FC = () => {
                 </button>
                 <div
                   id={`services-panel-${index}`}
-                  className={`overflow-hidden transition-all duration-400 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100 py-2' : 'max-h-0 opacity-0 py-0'}`}
+                  className={`overflow-hidden transition-all duration-400 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
                   style={{
                     transition: 'max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s',
-                    padding: 0 // Usuwa padding bezpośrednio z kontenera rozwijanego
                   }}
                 >
-                  <div className="space-y-2 px-5 pb-2 bg-pearl-white/90 rounded-b-2xl pt-0 sm:pt-2">
-                    {/* pt-0 usuwa padding-top na mobile, sm:pt-2 przywraca na większych ekranach */}
+                  <div className="space-y-2 px-5 py-2 bg-pearl-white/90 rounded-b-2xl">
+                    {/* Zmniejszony padding py-2 */}
                     {category.services.map((service, serviceIndex) => (
                       <div
                         key={serviceIndex}
