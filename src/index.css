@@ -244,3 +244,208 @@ section {
     scroll-snap-align: center;
   }
 }
+
+/* Mobile Contact Section Animations */
+@media (max-width: 768px) {
+  /* Accordion animation */
+  .accordion-content {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  /* Floating button animations */
+  @keyframes float-up {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes float-down {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+  }
+  
+  /* Social media floating animation */
+  .social-float-enter {
+    animation: float-up 0.3s ease-out forwards;
+  }
+  
+  .social-float-exit {
+    animation: float-down 0.3s ease-in forwards;
+  }
+  
+  /* Pulse animation for contact buttons */
+  @keyframes contact-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(183, 132, 167, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(183, 132, 167, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(183, 132, 167, 0);
+    }
+  }
+  
+  .contact-button-pulse {
+    animation: contact-pulse 2s infinite;
+  }
+  
+  /* Enhanced touch targets for mobile */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Smooth scroll for mobile */
+  .mobile-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Card hover effects on mobile */
+  .mobile-card {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  
+  .mobile-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px rgba(183, 132, 167, 0.2);
+  }
+  
+  /* Chevron rotation animation */
+  .chevron-rotate {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Map overlay animation */
+  .map-overlay {
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+  }
+  
+  /* Enhanced ripple effect for buttons */
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(40);
+      opacity: 0;
+    }
+  }
+  
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple-effect:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+  
+  .ripple-effect:active:before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Social media button specific animations */
+  .instagram-gradient {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+  
+  .facebook-gradient {
+    background: linear-gradient(45deg, #3b5998 0%, #4267B2 50%, #365899 100%);
+  }
+  
+  /* Contact section entrance animation */
+  @keyframes mobile-slide-up {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .mobile-entrance {
+    animation: mobile-slide-up 0.5s ease-out;
+  }
+  
+  /* Staggered animation for contact items */
+  .contact-item-1 { animation-delay: 0.1s; }
+  .contact-item-2 { animation-delay: 0.2s; }
+  .contact-item-3 { animation-delay: 0.3s; }
+  
+  /* Floating action button bounce */
+  @keyframes fab-bounce {
+    0%, 20%, 53%, 80%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+      transform: translate3d(0, -8px, 0);
+    }
+    70% {
+      transform: translate3d(0, -4px, 0);
+    }
+    90% {
+      transform: translate3d(0, -2px, 0);
+    }
+  }
+  
+  .fab-entrance {
+    animation: fab-bounce 1s ease-in-out;
+  }
+  
+  /* Interactive feedback for expandable sections */
+  .expand-feedback {
+    transition: background-color 0.2s ease-out;
+  }
+  
+  .expand-feedback:active {
+    background-color: rgba(183, 132, 167, 0.1);
+  }
+}
+
+/* Enhanced mobile-specific optimizations */
+@media (max-width: 480px) {
+  /* Even smaller screens adjustments */
+  .mobile-compact {
+    padding: 1rem;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  /* Ensure proper spacing on very small screens */
+  .mobile-spacing {
+    margin-bottom: 1rem;
+  }
+}

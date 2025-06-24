@@ -1,7 +1,9 @@
-import React from 'react';
-import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ExternalLink, ChevronDown } from 'lucide-react';
 
 const Location: React.FC = () => {
+  const [isHoursExpanded, setIsHoursExpanded] = useState(false);
+
   // Skrócone godziny otwarcia
   const openingHours = [
     { day: "Poniedziałek - Piątek", hours: "9:00 - 18:00" },
@@ -13,6 +15,14 @@ const Location: React.FC = () => {
     const address = "ul. Łodygowa 3, Warsaw, Poland, 03-687";
     const encodedAddress = encodeURIComponent(address);
     window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
+  };
+
+  const makePhoneCall = () => {
+    window.location.href = 'tel:+48791779784';
+  };
+
+  const sendEmail = () => {
+    window.location.href = 'mailto:atelierfryzurmm@interia.pl';
   };
 
   return (
@@ -34,7 +44,145 @@ const Location: React.FC = () => {
             Znajdź nas w Warszawie i umów się na wizytę już dziś
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-20">
+
+        {/* Mobile Layout (max-width: 768px) */}
+        <div className="md:hidden space-y-6 mobile-entrance">
+          {/* Compact Map & Contact Combined */}
+          <div className="bg-pearl-white/90 shadow-luxury rounded-3xl border border-dusty-mauve/20 overflow-hidden mobile-card">
+            {/* Map Section */}
+            <div className="relative">
+              <div className="h-64 w-full">
+                <iframe
+                  title="Mapa Studio Fryzur Elegance"
+                  src="https://www.google.com/maps?q=ul.+Łodygowa+3,+Warsaw,+Poland,+03-687&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <button
+                onClick={openGoogleMaps}
+                className="absolute bottom-4 right-4 bg-dusty-mauve hover:bg-dusty-mauve/80 text-pearl-white px-4 py-2 rounded-xl shadow-elegant transition-all duration-300 flex items-center space-x-2 text-sm font-medium touch-target ripple-effect"
+              >
+                <ExternalLink className="h-4 w-4" />
+                <span>Nawiguj</span>
+              </button>
+            </div>
+            
+            {/* Contact Details */}
+            <div className="p-6 space-y-4">
+              <div className="flex items-center space-x-4 mobile-entrance contact-item-1">
+                <div className="bg-dusty-mauve/10 p-3 rounded-full">
+                  <MapPin className="h-5 w-5 text-dusty-mauve" />
+                </div>
+                <div className="flex-1">
+                  <p className="font-playfair font-medium text-rich-black text-lg">ul. Łodygowa 3</p>
+                  <p className="font-crimson text-rich-black/70 text-sm">03-687 Warszawa</p>
+                </div>
+              </div>
+              
+              <button 
+                onClick={makePhoneCall}
+                className="flex items-center space-x-4 w-full text-left p-2 rounded-xl hover:bg-dusty-mauve/5 transition-all duration-300 mobile-entrance contact-item-2 touch-target"
+              >
+                <div className="bg-dusty-mauve/10 p-3 rounded-full">
+                  <Phone className="h-5 w-5 text-dusty-mauve" />
+                </div>
+                <div className="flex-1">
+                  <p className="font-playfair font-medium text-rich-black text-lg">+48 791 779 784</p>
+                  <p className="font-crimson text-rich-black/70 text-sm">Kliknij aby zadzwonić</p>
+                </div>
+              </button>
+              
+              <button 
+                onClick={sendEmail}
+                className="flex items-center space-x-4 w-full text-left p-2 rounded-xl hover:bg-dusty-mauve/5 transition-all duration-300 mobile-entrance contact-item-3 touch-target"
+              >
+                <div className="bg-dusty-mauve/10 p-3 rounded-full">
+                  <Mail className="h-5 w-5 text-dusty-mauve" />
+                </div>
+                <div className="flex-1">
+                  <p className="font-playfair font-medium text-rich-black text-lg break-all">atelierfryzurmm@interia.pl</p>
+                  <p className="font-crimson text-rich-black/70 text-sm">Wyślij email</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          {/* Expandable Opening Hours */}
+          <div className="bg-pearl-white/90 shadow-elegant rounded-2xl border border-dusty-mauve/20 overflow-hidden mobile-card">
+            <button
+              onClick={() => setIsHoursExpanded(!isHoursExpanded)}
+              className="w-full p-6 flex items-center justify-between text-left transition-all duration-300 hover:bg-dusty-mauve/5 expand-feedback touch-target"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="bg-dusty-mauve/10 p-3 rounded-full">
+                  <Clock className="h-5 w-5 text-dusty-mauve" />
+                </div>
+                <div>
+                  <h3 className="font-playfair text-xl font-medium text-rich-black">Godziny otwarcia</h3>
+                  <p className="font-crimson text-rich-black/70 text-sm">Poniedziałek - Sobota</p>
+                </div>
+              </div>
+              <div className={`transition-transform duration-300 chevron-rotate ${
+                isHoursExpanded ? 'rotate-180' : ''
+              }`}>
+                <ChevronDown className="h-6 w-6 text-dusty-mauve" />
+              </div>
+            </button>
+            
+            <div className={`accordion-content transition-all duration-300 ease-in-out ${
+              isHoursExpanded ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+            } overflow-hidden`}>
+              <div className="px-6 pb-6 pt-2 space-y-3">
+                {openingHours.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`flex justify-between items-center py-3 px-4 rounded-xl transition-all duration-300 mobile-entrance ${
+                      item.day === "Niedziela" 
+                        ? "bg-red-50 text-red-600 border border-red-200" 
+                        : "bg-dusty-mauve/5 hover:bg-dusty-mauve/10"
+                    }`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <span className="font-crimson font-medium text-sm">{item.day}</span>
+                    <span className="font-playfair font-semibold text-sm">{item.hours}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="bg-pearl-white/90 shadow-elegant rounded-2xl border border-dusty-mauve/20 p-6 mobile-card">
+            <h3 className="font-playfair text-xl font-medium text-rich-black mb-4 text-center">
+              Śledź nas
+            </h3>
+            <div className="flex justify-center space-x-6">
+              <a
+                href="#"
+                className="flex items-center space-x-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-3 rounded-xl shadow-elegant hover:scale-105 transition-all duration-300 touch-target"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="font-crimson text-sm">Instagram</span>
+              </a>
+              <a
+                href="#"
+                className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-3 rounded-xl shadow-elegant hover:scale-105 transition-all duration-300 touch-target"
+              >
+                <Facebook className="h-5 w-5" />
+                <span className="font-crimson text-sm">Facebook</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Layout (unchanged) */}
+        <div className="hidden md:grid lg:grid-cols-2 gap-20">
           {/* Map Section */}
           <div className="order-2 lg:order-1 animate-slide-in-left flex flex-col gap-8">
             <div className="bg-pearl-white/90 shadow-luxury overflow-hidden rounded-3xl border-2 border-dusty-mauve/30 relative">
@@ -152,6 +300,8 @@ const Location: React.FC = () => {
           </div>
         </div>
       </div>
+
+
     </section>
   );
 };
