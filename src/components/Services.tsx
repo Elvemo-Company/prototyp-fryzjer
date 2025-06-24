@@ -77,24 +77,27 @@ const Services: React.FC = () => {
             <div key={index} className="group animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               {/* Mobile Accordion */}
               <div className="block lg:hidden">
-                <button
-                  className={`w-full flex items-center justify-between bg-deep-burgundy/50 border border-dusty-mauve/30 shadow-elegant px-5 py-4 focus:outline-none transition-all duration-300 touch-manipulation rounded-2xl ${openIndex === index ? 'rounded-b-none' : ''}`}
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  aria-expanded={openIndex === index}
-                  aria-controls={`services-panel-${index}`}
-                >
-                  <div className="flex items-center space-x-4">
-                    <span className="bg-pearl-white/20 p-3 rounded-full text-pearl-white">{category.icon}</span>
-                    <span className="font-playfair text-lg font-medium text-pearl-white">{category.category}</span>
-                  </div>
-                  <span className="ml-2">
-                    {openIndex === index ? (
-                      <ChevronUp className="w-6 h-6 text-pearl-white transition-transform duration-300" />
-                    ) : (
-                      <ChevronDown className="w-6 h-6 text-pearl-white transition-transform duration-300" />
-                    )}
-                  </span>
-                </button>
+                <div className="relative">
+                  <div className={`absolute inset-0 bg-white pointer-events-none z-0 rounded-2xl transition-all duration-300 ${openIndex === index ? 'rounded-b-none' : ''}`} />
+                  <button
+                    className={`relative w-full flex items-center justify-between bg-deep-burgundy/50 border border-dusty-mauve/30 shadow-elegant px-5 py-4 focus:outline-none transition-all duration-300 touch-manipulation rounded-2xl ${openIndex === index ? 'rounded-b-none' : ''}`}
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    aria-expanded={openIndex === index}
+                    aria-controls={`services-panel-${index}`}
+                  >
+                    <div className="flex items-center space-x-4">
+                      <span className="bg-pearl-white/20 p-3 rounded-full text-pearl-white">{category.icon}</span>
+                      <span className="font-playfair text-lg font-medium text-pearl-white">{category.category}</span>
+                    </div>
+                    <span className="ml-2">
+                      {openIndex === index ? (
+                        <ChevronUp className="w-6 h-6 text-pearl-white transition-transform duration-300" />
+                      ) : (
+                        <ChevronDown className="w-6 h-6 text-pearl-white transition-transform duration-300" />
+                      )}
+                    </span>
+                  </button>
+                </div>
                 <div
                   id={`services-panel-${index}`}
                   className={`overflow-hidden transition-all duration-400 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}

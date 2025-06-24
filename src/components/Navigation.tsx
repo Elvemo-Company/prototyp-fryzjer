@@ -196,9 +196,9 @@ const Navigation: React.FC = () => {
         {/* Menu Content */}
         <div className="relative h-full flex flex-col justify-between p-6 pt-24">
           {/* Brand Name */}
-          <div className={`text-center mb-8 transition-all duration-600 ease-in-out delay-200 ${
+          <div className={`flex flex-col items-center justify-center text-center transition-all duration-600 ease-in-out delay-200 ${
             isOpen ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-2'
-          }`}>
+          }`} style={{minHeight: '120px'}}>
             <h1 className="font-playfair text-3xl font-light text-pearl-white mb-2">
               Atelier Fryzur
             </h1>
@@ -209,7 +209,7 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Navigation Items */}
-          <div className="flex-1 flex flex-col justify-center space-y-2">
+          <div className="flex-1 flex flex-col justify-center">
             {navItems.map((item, index) => (
               <div
                 key={item.id}

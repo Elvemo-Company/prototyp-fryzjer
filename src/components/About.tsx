@@ -34,21 +34,21 @@ const About: React.FC = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-dusty-mauve to-dusty-mauve/80 rounded-full flex items-center justify-center mb-2 shadow-soft group-hover:scale-105 transition-transform duration-300">
                 <Award className="h-6 w-6 text-white" />
               </div>
-              <span className="font-playfair text-xs font-semibold text-dusty-mauve">Profesjonalizm</span>
+              <span className="font-playfair text-xs font-semibold text-deep-burgundy">Profesjonalizm</span>
             </div>
             
             <div className="flex flex-col items-center group cursor-pointer">
               <div className="w-12 h-12 bg-gradient-to-br from-dusty-mauve to-dusty-mauve/80 rounded-full flex items-center justify-center mb-2 shadow-soft group-hover:scale-105 transition-transform duration-300">
                 <Heart className="h-6 w-6 text-white" />
               </div>
-              <span className="font-playfair text-xs font-semibold text-dusty-mauve">Indywidualność</span>
+              <span className="font-playfair text-xs font-semibold text-deep-burgundy">Indywidualność</span>
             </div>
             
             <div className="flex flex-col items-center group cursor-pointer">
               <div className="w-12 h-12 bg-gradient-to-br from-dusty-mauve to-dusty-mauve/80 rounded-full flex items-center justify-center mb-2 shadow-soft group-hover:scale-105 transition-transform duration-300">
                 <Users className="h-6 w-6 text-white" />
               </div>
-              <span className="font-playfair text-xs font-semibold text-dusty-mauve">Atmosfera</span>
+              <span className="font-playfair text-xs font-semibold text-deep-burgundy">Atmosfera</span>
             </div>
           </div>
           
@@ -57,17 +57,17 @@ const About: React.FC = () => {
             <div className="grid grid-cols-1 gap-3 text-center">
               <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
                 <p className="font-crimson text-xs text-rich-black leading-relaxed">
-                  <span className="font-semibold text-dusty-mauve">Profesjonalizm:</span> Doświadczeni styliści z międzynarodowymi certyfikatami
+                  <span className="font-semibold text-deep-burgundy">Profesjonalizm:</span> Doświadczeni styliści z międzynarodowymi certyfikatami
                 </p>
               </div>
               <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
                 <p className="font-crimson text-xs text-rich-black leading-relaxed">
-                  <span className="font-semibold text-dusty-mauve">Indywidualność:</span> Stylizacje dostosowane do Twojej osobowości
+                  <span className="font-semibold text-deep-burgundy">Indywidualność:</span> Stylizacje dostosowane do Twojej osobowości
                 </p>
               </div>
               <div className="border-b border-dusty-mauve/20 pb-2 last:border-b-0">
                 <p className="font-crimson text-xs text-rich-black leading-relaxed">
-                  <span className="font-semibold text-dusty-mauve">Atmosfera:</span> Przytulne wnętrze i chwile relaksu
+                  <span className="font-semibold text-deep-burgundy">Atmosfera:</span> Przytulne wnętrze i chwile relaksu
                 </p>
               </div>
             </div>

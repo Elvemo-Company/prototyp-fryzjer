@@ -19,7 +19,7 @@ const SectionSeparator: React.FC = () => (
 
 function App() {
   return (
-    <div className="font-lato bg-gradient-to-br from-dusty-mauve/70 via-pearl-white/95 to-dusty-mauve/70 min-h-screen">
+    <div className="font-lato bg-gradient-to-br from-dusty-mauve/100 via-pearl-white/95 to-dusty-mauve/100 min-h-screen">
       <Navigation />
       <Hero />
       <About />
