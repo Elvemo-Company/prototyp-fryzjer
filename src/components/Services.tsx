@@ -167,8 +167,8 @@ const Services: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-20">
-          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-3xl mx-auto leading-relaxed mb-8">
+        <div className="text-center mt-12 md:mt-16">
+          <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-3xl mx-auto leading-relaxed mb-6 md:mb-8">
             Ceny mogą się różnić w zależności od długości i typu włosów
           </p>
           <div className="inline-flex items-center space-x-4 bg-dusty-mauve/10 px-12 py-6 border border-dusty-mauve/20">

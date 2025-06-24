@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom utility classes */
+@layer utilities {
+  .hover\:scale-102:hover {
+    transform: scale(1.02);
+  }
+  
+  .animate-ping-slow {
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+}
+
 /* Łagodne przejścia między sekcjami */
 section {
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -26,6 +37,182 @@ section {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Enhanced Mobile Carousel Styles */
+@media (max-width: 767px) {
+  /* Scroll snap for carousel */
+  .snap-x {
+    scroll-snap-type: x mandatory;
+  }
+  .snap-center {
+    scroll-snap-align: center;
+  }
+  
+  /* Enhanced touch scrolling */
+  .carousel-container {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+  }
+  
+  /* Smooth momentum scrolling for iOS */
+  .carousel-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Gallery slide transitions */
+  .gallery-slide {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  /* Arrow button hover effects */
+  .carousel-arrow {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  /* Dot indicator animations */
+  .dot-indicator {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dot-indicator.active {
+    transform: scale(1.2);
+  }
+}
+
+/* Fullscreen Mobile Menu Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(45deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes particles-drift {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateX(10px) translateY(-15px) rotate(45deg);
+  }
+  100% {
+    transform: translateX(-5px) translateY(-10px) rotate(45deg);
+  }
+}
+
+/* Floating particles animation */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Custom animations for menu morphing */
+@keyframes menu-morph {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(90deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(180deg) scale(1);
+  }
+}
+
+/* Stagger animations for menu items */
+.menu-item-enter {
+  animation: slideInStagger 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideInStagger {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Magnetic hover effect for social icons */
+@keyframes magnetic-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Enhanced backdrop blur for modern browsers */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Smooth gradient transitions */
+.gradient-animated {
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Menu overlay specific animations */
+.menu-overlay-enter {
+  animation: overlayFadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.menu-overlay-exit {
+  animation: overlayFadeOut 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+}
+
+@keyframes overlayFadeIn {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(24px);
+    transform: scale(1);
+  }
+}
+
+@keyframes overlayFadeOut {
+  0% {
+    opacity: 1;
+    backdrop-filter: blur(24px);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transform: scale(1.1);
+  }
 }
 
 @media (max-width: 1023px) {

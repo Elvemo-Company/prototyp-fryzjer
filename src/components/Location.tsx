@@ -102,7 +102,7 @@ const Location: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-playfair font-medium text-rich-black text-xl mb-1">Telefon</p>
-                    <p className="font-crimson text-rich-black/70 text-lg">+48 123 456 789</p>
+                    <p className="font-crimson text-rich-black/70 text-lg">+48 791 779 784</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-6">
