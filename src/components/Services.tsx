@@ -166,16 +166,16 @@ const Services: React.FC = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12 md:mt-16">
+        <div className="text-center mt-8 md:mt-16">
           <p className="font-crimson text-base xs:text-lg sm:text-large text-rich-black/80 max-w-xs xs:max-w-md sm:max-w-3xl mx-auto leading-relaxed mb-6 md:mb-8">
             Ceny mogą się różnić w zależności od długości i typu włosów
           </p>
-          <div className="inline-flex items-center space-x-4 bg-dusty-mauve/10 px-12 py-6 border border-dusty-mauve/20">
-            <Sparkles className="h-6 w-6 text-deep-burgundy" />
-            <span className="font-playfair text-deep-burgundy font-medium text-xl">
+          <div className="flex flex-col md:inline-flex md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 bg-pearl-white/80 px-6 md:px-12 py-4 md:py-6 border border-dusty-mauve/20 rounded-lg">
+            <Sparkles className="h-8 w-8 md:h-6 md:w-6 text-deep-burgundy" />
+            <span className="font-playfair text-deep-burgundy font-medium text-lg md:text-xl text-center md:text-left">
               Konsultacja zawsze bezpłatna
             </span>
-            <Sparkles className="h-6 w-6 text-deep-burgundy" />
+            <Sparkles className="h-8 w-8 md:h-6 md:w-6 text-deep-burgundy" />
           </div>
         </div>
       </div>

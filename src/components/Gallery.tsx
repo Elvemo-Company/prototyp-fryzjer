@@ -115,14 +115,14 @@ const Gallery: React.FC = () => {
                 key={index}
                 className="flex-none w-full snap-center gallery-slide"
               >
-                <div className="group relative overflow-hidden shadow-elegant hover:shadow-luxury transition-all duration-500 bg-pearl-white/90 border border-dusty-mauve/20 rounded-3xl mx-1">
+                <div className="group relative overflow-hidden shadow-elegant md:hover:shadow-luxury transition-all duration-500 bg-pearl-white/90 border border-dusty-mauve/20 rounded-3xl mx-1">
                   <div className="aspect-[4/5]">
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 rounded-3xl"
+                      className="w-full h-full object-cover md:transition-transform md:duration-700 md:group-hover:scale-110 rounded-3xl"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-deep-burgundy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-burgundy/60 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 rounded-3xl"></div>
                   </div>
                 </div>
               </div>
@@ -153,16 +153,16 @@ const Gallery: React.FC = () => {
           {galleryImages.map((image, index) => (
             <div 
               key={index} 
-              className="group relative overflow-hidden shadow-elegant hover:shadow-luxury transition-all duration-500 break-inside-avoid bg-pearl-white/90 border border-dusty-mauve/20 rounded-3xl"
+              className="group relative overflow-hidden shadow-elegant md:hover:shadow-luxury transition-all duration-500 break-inside-avoid bg-pearl-white/90 border border-dusty-mauve/20 rounded-3xl"
             >
               <div className={`${image.tall ? 'aspect-[3/4]' : 'aspect-square'}`}>
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 rounded-3xl"
+                  className="w-full h-full object-cover md:transition-transform md:duration-700 md:group-hover:scale-110 rounded-3xl"
                 />
                 {/* Hover Overlay - różowy efekt */}
-                <div className="absolute inset-0 bg-gradient-to-t from-deep-burgundy/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-burgundy/60 via-transparent to-transparent opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-500 rounded-3xl">
                 </div>
               </div>
             </div>

@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fix for mobile white bars */
+html, body {
+  min-height: 100vh;
+  background-color: #2c1810; /* rich-black color */
+  overflow-x: hidden;
+}
+
+/* Mobile viewport fix */
+@supports (height: 100dvh) {
+  html, body {
+    min-height: 100dvh;
+  }
+}
+
+/* Prevent overscroll bounce on iOS */
+body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Custom utility classes */
 @layer utilities {
   .hover\:scale-102:hover {
