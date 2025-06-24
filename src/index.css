@@ -313,15 +313,7 @@ section {
     -webkit-overflow-scrolling: touch;
   }
   
-  /* Card hover effects on mobile */
-  .mobile-card {
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-  }
-  
-  .mobile-card:active {
-    transform: scale(0.98);
-    box-shadow: 0 5px 15px rgba(183, 132, 167, 0.2);
-  }
+
   
   /* Chevron rotation animation */
   .chevron-rotate {

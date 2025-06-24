@@ -48,7 +48,7 @@ const Location: React.FC = () => {
         {/* Mobile Layout (max-width: 768px) */}
         <div className="md:hidden space-y-6 mobile-entrance">
           {/* Compact Map & Contact Combined */}
-          <div className="bg-pearl-white/90 shadow-luxury rounded-3xl border border-dusty-mauve/20 overflow-hidden mobile-card">
+          <div className="bg-pearl-white/90 shadow-luxury rounded-3xl border border-dusty-mauve/20 overflow-hidden">
             {/* Map Section */}
             <div className="relative">
               <div className="h-64 w-full">
@@ -64,12 +64,16 @@ const Location: React.FC = () => {
                   className="w-full h-full"
                 ></iframe>
               </div>
+            </div>
+            
+            {/* Navigation Button */}
+            <div className="px-6 pt-4 pb-2">
               <button
                 onClick={openGoogleMaps}
-                className="absolute bottom-4 right-4 bg-dusty-mauve hover:bg-dusty-mauve/80 text-pearl-white px-4 py-2 rounded-xl shadow-elegant transition-all duration-300 flex items-center space-x-2 text-sm font-medium touch-target ripple-effect"
+                className="w-full bg-dusty-mauve hover:bg-dusty-mauve/80 text-pearl-white py-3 rounded-xl shadow-elegant transition-all duration-300 flex items-center justify-center space-x-2 font-medium touch-target"
               >
-                <ExternalLink className="h-4 w-4" />
-                <span>Nawiguj</span>
+                <ExternalLink className="h-5 w-5" />
+                <span>Otwórz w Google Maps</span>
               </button>
             </div>
             
@@ -114,7 +118,7 @@ const Location: React.FC = () => {
           </div>
 
           {/* Expandable Opening Hours */}
-          <div className="bg-pearl-white/90 shadow-elegant rounded-2xl border border-dusty-mauve/20 overflow-hidden mobile-card">
+          <div className="bg-pearl-white/90 shadow-elegant rounded-2xl border border-dusty-mauve/20 overflow-hidden">
             <button
               onClick={() => setIsHoursExpanded(!isHoursExpanded)}
               className="w-full p-6 flex items-center justify-between text-left transition-all duration-300 hover:bg-dusty-mauve/5 expand-feedback touch-target"
@@ -158,7 +162,7 @@ const Location: React.FC = () => {
           </div>
 
           {/* Social Media Links */}
-          <div className="bg-pearl-white/90 shadow-elegant rounded-2xl border border-dusty-mauve/20 p-6 mobile-card">
+          <div className="bg-pearl-white/90 shadow-elegant rounded-2xl border border-dusty-mauve/20 p-6">
             <h3 className="font-playfair text-xl font-medium text-rich-black mb-4 text-center">
               Śledź nas
             </h3>
