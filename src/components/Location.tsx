@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ExternalLink, ChevronDown } from 'lucide-react';
+import React from 'react';
+import { MapPin, Clock, Phone, Mail, Instagram, Facebook, ExternalLink } from 'lucide-react';
 
 const Location: React.FC = () => {
-  const [isHoursExpanded, setIsHoursExpanded] = useState(false);
-
   // Skrócone godziny otwarcia
   const openingHours = [
     { day: "Poniedziałek - Piątek", hours: "9:00 - 18:00" },
@@ -117,47 +115,33 @@ const Location: React.FC = () => {
             </div>
           </div>
 
-          {/* Expandable Opening Hours */}
-          <div className="bg-pearl-white/90 shadow-elegant rounded-2xl border border-dusty-mauve/20 overflow-hidden">
-            <button
-              onClick={() => setIsHoursExpanded(!isHoursExpanded)}
-              className="w-full p-6 flex items-center justify-between text-left transition-all duration-300 hover:bg-dusty-mauve/5 expand-feedback touch-target"
-            >
-              <div className="flex items-center space-x-4">
-                <div className="bg-dusty-mauve/10 p-3 rounded-full">
-                  <Clock className="h-5 w-5 text-dusty-mauve" />
-                </div>
-                <div>
-                  <h3 className="font-playfair text-xl font-medium text-rich-black">Godziny otwarcia</h3>
-                  <p className="font-crimson text-rich-black text-sm">Poniedziałek - Sobota</p>
-                </div>
+          {/* Always Visible Opening Hours */}
+          <div className="bg-pearl-white/90 shadow-elegant rounded-2xl border border-dusty-mauve/20 p-6">
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="bg-dusty-mauve/10 p-3 rounded-full">
+                <Clock className="h-5 w-5 text-dusty-mauve" />
               </div>
-              <div className={`transition-transform duration-300 chevron-rotate ${
-                isHoursExpanded ? 'rotate-180' : ''
-              }`}>
-                <ChevronDown className="h-6 w-6 text-dusty-mauve" />
+              <div>
+                <h3 className="font-playfair text-xl font-medium text-rich-black">Godziny otwarcia</h3>
+                <p className="font-crimson text-rich-black text-sm">Poniedziałek - Sobota</p>
               </div>
-            </button>
+            </div>
             
-            <div className={`accordion-content transition-all duration-300 ease-in-out ${
-              isHoursExpanded ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
-            } overflow-hidden`}>
-              <div className="px-6 pb-6 pt-2 space-y-3">
-                {openingHours.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`flex justify-between items-center py-3 px-4 rounded-xl transition-all duration-300 mobile-entrance ${
-                      item.day === "Niedziela" 
-                        ? "bg-red-50 text-red-600 border border-red-200" 
-                        : "bg-dusty-mauve/5 hover:bg-dusty-mauve/10"
-                    }`}
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <span className="font-crimson font-medium text-sm">{item.day}</span>
-                    <span className="font-playfair font-semibold text-sm">{item.hours}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="space-y-3">
+              {openingHours.map((item, index) => (
+                <div
+                  key={index}
+                  className={`flex justify-between items-center py-3 px-4 rounded-xl transition-all duration-300 mobile-entrance ${
+                    item.day === "Niedziela" 
+                      ? "bg-red-50 text-red-600 border border-red-200" 
+                      : "bg-dusty-mauve/5 hover:bg-dusty-mauve/10"
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <span className="font-crimson font-medium text-sm">{item.day}</span>
+                  <span className="font-playfair font-semibold text-sm">{item.hours}</span>
+                </div>
+              ))}
             </div>
           </div>
 

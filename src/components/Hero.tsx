@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-8 animate-fade-in-up w-full">
         {/* Mobile Title */}
-        <h1 className="font-playfair text-4xl xs:text-5xl font-light text-pearl-white mb-4 leading-tight tracking-tight sm:hidden">
+        <h1 className="font-playfair text-4xl xs:text-5xl font-light text-pearl-white mb-8 leading-tight tracking-tight sm:hidden">
           Atelier Fryzur
           <span className="block font-extralight italic text-xl xs:text-2xl mt-1">Mariola Michnowska</span>
         </h1>
